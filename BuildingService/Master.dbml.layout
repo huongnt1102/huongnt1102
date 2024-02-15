@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 15.75" name="Master">
+  <DataContextMoniker Name="/MasterDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2a4db223-c9db-427d-b297-c108fde5dfcb" absoluteBounds="0.75, 9.125, 2, 6.3861311848958326">
+      <DataClassMoniker Name="/MasterDataContext/tnKhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2676011a-0e51-4b60-b634-2eddcf5dd10e" absoluteBounds="0.765, 9.585, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fad06fa0-b959-4677-9a95-a1c642b4d5b3" absoluteBounds="3.5, 0.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/MasterDataContext/SendMailNhacNo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4efba96-9a13-428a-8ebb-28275fc68e0b" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc15b852-cd2d-443c-85b9-592031c71d93" absoluteBounds="6.25, 4.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MasterDataContext/SendMailDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f745b48-fb35-4bd9-b6f0-8e9ef91d8229" absoluteBounds="6.265, 4.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4cf685b8-643e-42d6-a07a-f7d6bbec0e3c" absoluteBounds="0.75, 4, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/MasterDataContext/SendMailAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de8f7814-0816-472f-9ca9-97fd928faddd" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07cdfb24-0b33-49ed-8c5e-db152874c0d8" absoluteBounds="3.5, 4, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/MasterDataContext/SendMail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c5046bf-6155-4cbf-bdcb-b54cf68c0d9b" absoluteBounds="3.515, 4.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 9.12653746153846); (3.125 : 8.75153746153846); (3.125 : 2.02005126953125); (3.5 : 2.02005126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterDataContext/tnKhachHang/tnKhachHang_SendMailNhacNo" />
+      <nodes>
+        <classShapeMoniker Id="2a4db223-c9db-427d-b297-c108fde5dfcb" />
+        <classShapeMoniker Id="fad06fa0-b959-4677-9a95-a1c642b4d5b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.3500868232171); (7.25 : 12.3500868232171); (7.25 : 5.82859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterDataContext/tnKhachHang/tnKhachHang_SendMailDetail" />
+      <nodes>
+        <classShapeMoniker Id="2a4db223-c9db-427d-b297-c108fde5dfcb" />
+        <classShapeMoniker Id="bc15b852-cd2d-443c-85b9-592031c71d93" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4); (1.75 : 2.68632940429688); (3.5 : 2.68632940429688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterDataContext/SendMailAccount/SendMailAccount_SendMailNhacNo" />
+      <nodes>
+        <classShapeMoniker Id="4cf685b8-643e-42d6-a07a-f7d6bbec0e3c" />
+        <classShapeMoniker Id="fad06fa0-b959-4677-9a95-a1c642b4d5b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.03929768880208); (6.25 : 5.03929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterDataContext/SendMail/SendMail_SendMailDetail" />
+      <nodes>
+        <classShapeMoniker Id="07cdfb24-0b33-49ed-8c5e-db152874c0d8" />
+        <classShapeMoniker Id="bc15b852-cd2d-443c-85b9-592031c71d93" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.98159912109375); (3.5 : 4.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterDataContext/SendMailAccount/SendMailAccount_SendMail" />
+      <nodes>
+        <classShapeMoniker Id="4cf685b8-643e-42d6-a07a-f7d6bbec0e3c" />
+        <classShapeMoniker Id="07cdfb24-0b33-49ed-8c5e-db152874c0d8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

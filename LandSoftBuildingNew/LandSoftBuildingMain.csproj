@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D354D789-72DE-4E8B-B8E4-0D5B450F8CB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LandSoftBuildingMain</RootNamespace>
+    <AssemblyName>LandSoftBuildingMain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AnNinh, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\AnNinh.dll</HintPath>
+    </Reference>
+    <Reference Include="AuthorizationClass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\AuthorizationClass.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.AppExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.AppExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.AppVime, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.AppVime.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.Asset, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.Asset.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.Help, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.Help.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.KinhPhiDuKien, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.KinhPhiDuKien.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.PhanQuyenBieuDo, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.PhanQuyenBieuDo.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.PhanQuyenItemMain, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.PhanQuyenItemMain.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.PrintControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.PrintControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.ServiceAndUtilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.ServiceAndUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.SMS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.SMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.SMSZalo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.SMSZalo.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.Survey, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.Survey.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.SystemLog, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.SystemLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Building.WorkSchedule, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.WorkSchedule.dll</HintPath>
+    </Reference>
+    <Reference Include="BuildingDesignTemplate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\BuildingDesignTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="Deposit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Deposit.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DichVu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.BanGiaoMatBang, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.BanGiaoMatBang.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.ChoThue, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.ChoThue.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.Dien, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.Dien.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.Gas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.Gas.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.GhiSo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.GhiSo.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.GiuXe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.GiuXe.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.HoBoi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.HoBoi.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.KhachHang, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.KhachHang.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.KhoaSo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.KhoaSo.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.LaiSuat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.LaiSuat.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.MatBang, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.MatBang.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.MatBang.ViewMap, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.MatBang.ViewMap.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.NhanKhau, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.NhanKhau.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.Nuoc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.Nuoc.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.PhiBaoTri, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.PhiBaoTri.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.PhiQuanLy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.PhiQuanLy.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.PhongTap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.PhongTap.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.Quy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.Quy.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.ThangMay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.ThangMay.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.TheTichHop, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.TheTichHop.dll</HintPath>
+    </Reference>
+    <Reference Include="DichVu.YeuCau, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DichVu.YeuCau.dll</HintPath>
+    </Reference>
+    <Reference Include="DIP.SoftPhoneAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DIP.SoftPhoneAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="DIP.SoftPhoneSDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DIP.SoftPhoneSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="DIP.SwitchBoard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DIP.SwitchBoard.dll</HintPath>
+    </Reference>
+    <Reference Include="DIPCRM.Need, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DIPCRM.Need.dll</HintPath>
+    </Reference>
+    <Reference Include="DIPCRM.PriceAlert, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\DIPCRM.PriceAlert.dll</HintPath>
+    </Reference>
+    <Reference Include="Document, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Document.dll</HintPath>
+    </Reference>
+    <Reference Include="EmailAmazon, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\EmailAmazon.dll</HintPath>
+    </Reference>
+    <Reference Include="FTP">
+      <HintPath>..\FTP\bin\Debug\FTP.dll</HintPath>
+    </Reference>
+    <Reference Include="HopDongThueNgoai, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\HopDongThueNgoai.dll</HintPath>
+    </Reference>
+    <Reference Include="KyThuat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\KyThuat.dll</HintPath>
+    </Reference>
+    <Reference Include="LandSoftBuilding.Fund, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandSoftBuilding.Fund.dll</HintPath>
+    </Reference>
+    <Reference Include="LandSoftBuilding.Lease, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandSoftBuilding.Lease.dll</HintPath>
+    </Reference>
+    <Reference Include="LandSoftBuilding.Marketing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandSoftBuilding.Marketing.dll</HintPath>
+    </Reference>
+    <Reference Include="LandSoftBuilding.Receivables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandSoftBuilding.Receivables.dll</HintPath>
+    </Reference>
+    <Reference Include="LandsoftBuilding.Receivables.Reports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandsoftBuilding.Receivables.Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="LandSoftBuilding.Report, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandSoftBuilding.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="LandsoftBuildingGeneral, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandsoftBuildingGeneral.dll</HintPath>
+    </Reference>
+    <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Library.Class, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.Class.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="SAP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\SAP.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ToaNha, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\ToaNha.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CallDIPSupport.cs" />
+    <Compile Include="Connect_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect_frm.designer.cs">
+      <DependentUpon>Connect_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetNetWorkInfo.cs" />
+    <Compile Include="IntrolCtl\CtlKeToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IntrolCtl\CtlKeToan.Designer.cs">
+      <DependentUpon>CtlKeToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntrolCtl\CtlKyThuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IntrolCtl\CtlKyThuat.Designer.cs">
+      <DependentUpon>CtlKyThuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntrolCtl\CtlQuanLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IntrolCtl\CtlQuanLy.Designer.cs">
+      <DependentUpon>CtlQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newIntroCtlXuanMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newIntroCtlXuanMai.Designer.cs">
+      <DependentUpon>newIntroCtlXuanMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanner.designer.cs">
+      <DependentUpon>frmBanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnection.Designer.cs">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDesktop2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesktop2.Designer.cs">
+      <DependentUpon>frmDesktop2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGoogleMaps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGoogleMaps.Designer.cs">
+      <DependentUpon>frmGoogleMaps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainIntro.designer.cs">
+      <DependentUpon>frmMainIntro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportList.Designer.cs">
+      <DependentUpon>frmReportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupport.designer.cs">
+      <DependentUpon>frmSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThangThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThangThanhToan.Designer.cs">
+      <DependentUpon>frmThangThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intro_ctl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="intro_ctl.designer.cs">
+      <DependentUpon>intro_ctl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newIntroCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newIntroCtl.Designer.cs">
+      <DependentUpon>newIntroCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuangForm.Designer.cs">
+      <DependentUpon>QuangForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UploadService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Connect_frm.resx">
+      <DependentUpon>Connect_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntrolCtl\CtlKeToan.resx">
+      <DependentUpon>CtlKeToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntrolCtl\CtlKyThuat.resx">
+      <DependentUpon>CtlKyThuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntrolCtl\CtlQuanLy.resx">
+      <DependentUpon>CtlQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newIntroCtlXuanMai.resx">
+      <DependentUpon>newIntroCtlXuanMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBanner.resx">
+      <DependentUpon>frmBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnection.resx">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDesktop2.resx">
+      <DependentUpon>frmDesktop2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGoogleMaps.resx">
+      <DependentUpon>frmGoogleMaps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainIntro.resx">
+      <DependentUpon>frmMainIntro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportList.resx">
+      <DependentUpon>frmReportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupport.resx">
+      <DependentUpon>frmSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThangThanhToan.resx">
+      <DependentUpon>frmThangThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="intro_ctl.resx">
+      <DependentUpon>intro_ctl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newIntroCtl.resx">
+      <DependentUpon>newIntroCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\DIPCRM.Support.SupportService.Question.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\SupportService\support.wsdl" />
+    <None Include="Service References\UploadService\FileUploader.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tien2.png" />
+    <None Include="Resources\textwraptight.svg" />
+    <None Include="Resources\update %282%29.png" />
+    <None Include="Resources\yeu_cau.png" />
+    <None Include="Resources\Elevator-100.png" />
+    <None Include="Resources\Card in Use_100.png" />
+    <None Include="Resources\phone-icon.png" />
+    <None Include="Resources\nhatkycuocgoi.png" />
+    <None Include="Resources\ic_Transfer.png" />
+    <None Include="Resources\ic_KyQuy.png" />
+    <None Include="Resources\ic_can_ho.png" />
+    <None Include="Resources\ic_cap_nhat.png" />
+    <None Include="Resources\ic_cau_hinh.png" />
+    <None Include="Resources\ic_cong_no.png" />
+    <None Include="Resources\ic_cu_dan.png" />
+    <None Include="Resources\ic_danh_muc.png" />
+    <None Include="Resources\ic_danh_sach.png" />
+    <None Include="Resources\ic_dich_vu.png" />
+    <None Include="Resources\ic_dien.png" />
+    <None Include="Resources\ic_email.png" />
+    <None Include="Resources\ic_ftp.png" />
+    <None Include="Resources\ic_gas.png" />
+    <None Include="Resources\ic_gioi_thieu.png" />
+    <None Include="Resources\ic_History.png" />
+    <None Include="Resources\ic_ho_tro.png" />
+    <None Include="Resources\ic_hoa_don.png" />
+    <None Include="Resources\ic_hoa_don_delete.png" />
+    <None Include="Resources\ic_hop_dong.png" />
+    <None Include="Resources\ic_khach_hang.png" />
+    <None Include="Resources\ic_khau_tru.png" />
+    <None Include="Resources\ic_khoa.png" />
+    <None Include="Resources\ic_le_tan.png" />
+    <None Include="Resources\ic_lich_hen.png" />
+    <None Include="Resources\ic_mau_in.png" />
+    <None Include="Resources\ic_ngon_ngu.png" />
+    <None Include="Resources\ic_nhan_vien.png" />
+    <None Include="Resources\ic_nhat_ky.png" />
+    <None Include="Resources\ic_nhiem_vu.png" />
+    <None Include="Resources\ic_nhom_can_ho.png" />
+    <None Include="Resources\ic_nuoc.png" />
+    <None Include="Resources\ic_phan_quyen.png" />
+    <None Include="Resources\ic_phieu_chi.png" />
+    <None Include="Resources\ic_phieu_thu.png" />
+    <None Include="Resources\ic_tai_lieu.png" />
+    <None Include="Resources\ic_thang_may.png" />
+    <None Include="Resources\ic_the_xe.png" />
+    <None Include="Resources\ic_the_xe_xoa.png" />
+    <None Include="Resources\ic_them.png" />
+    <None Include="Resources\ic_thoat.png" />
+    <None Include="Resources\ic_toa_nha.png" />
+    <None Include="Resources\ic_tong_dai.png" />
+    <None Include="Resources\ic_tong_the.png" />
+    <None Include="Resources\icon_start48.png" />
+    <None Include="Resources\ic-building32.png" />
+    <None Include="Resources\ic_bao_cao.png" />
+    <None Include="Resources\ic_xuatkho16.png" />
+    <None Include="Resources\ic-buy-32.png" />
+    <None Include="Resources\ic_bank.png" />
+    <None Include="Resources\icons8_planner_32px.png" />
+    <None Include="Resources\icons8_europe_filled_50px.png" />
+    <None Include="Resources\icons8_wifi_lock_filled_50px.png" />
+    <None Include="Resources\icons8_wifi_lock_filled_50px1.png" />
+    <None Include="Resources\icons8_code_filled_50px.png" />
+    <None Include="Resources\icons8_phone_not_being_used_filled_50px.png" />
+    <None Include="Resources\icons8_city_filled_50px.png" />
+    <None Include="Resources\icons8_last_24_hours_filled_50px.png" />
+    <None Include="Resources\icons8_guest_filled_50px.png" />
+    <None Include="Resources\icons8_bell_filled_50px.png" />
+    <None Include="Resources\icons8_calendar_plus_filled_50px.png" />
+    <None Include="Resources\icons8_parse_resumes_filled_50px.png" />
+    <None Include="Resources\icons8_product_documents_filled_50px.png" />
+    <None Include="Resources\icons8_lock_filled_50px.png" />
+    <None Include="Resources\icons8_shutdown_filled_50px.png" />
+    <None Include="Resources\icons8_sorting_answers_filled_50px.png" />
+    <None Include="Resources\icons8_plus_filled_50px.png" />
+    <None Include="Resources\icons8_summary_list_filled_50px.png" />
+    <None Include="Resources\icons8_move_node_down_filled_50px.png" />
+    <None Include="Resources\icons8_graph_report_script_filled_50px.png" />
+    <None Include="Resources\icons8_contract_job_filled_50px.png" />
+    <None Include="Resources\icons8_client_company_filled_50px.png" />
+    <None Include="Resources\icons8_front_desk_filled_50px.png" />
+    <None Include="Resources\icons8_classroom_filled_50px.png" />
+    <None Include="Resources\icons8_company_filled_50px.png" />
+    <None Include="Resources\icons8_maintenance_filled_50px_1.png" />
+    <None Include="Resources\icons8_api_settings_filled_50px.png" />
+    <None Include="Resources\icons8_webpage_filled_50px.png" />
+    <None Include="Resources\icons8_friends_filled_50px.png" />
+    <None Include="Resources\icons8_multicultural_people_filled_50px.png" />
+    <None Include="Resources\icons8_news_filled_50px.png" />
+    <None Include="Resources\icons8_google_news_filled_50px.png" />
+    <None Include="Resources\icons8_Taxi_Mobile_App_50px.png" />
+    <None Include="Resources\icons8_smartphone_filled_50px.png" />
+    <None Include="Resources\icons8_phonelink_setup_filled_50px.png" />
+    <None Include="Resources\icons8_sell_filled_50px.png" />
+    <None Include="Resources\icons8_request_service_filled_50px.png" />
+    <None Include="Resources\icons8_diploma_1_filled_50px.png" />
+    <None Include="Resources\icons8_bank_card_back_side_filled_50px.png" />
+    <None Include="Resources\icons8_no_credit_cards_filled_50px.png" />
+    <None Include="Resources\icons8_valet_parking_filled_50px.png" />
+    <None Include="Resources\icons8_electricity_filled_50px.png" />
+    <None Include="Resources\icons8_piping_filled_50px.png" />
+    <None Include="Resources\icons8_elevator_filled_50px.png" />
+    <None Include="Resources\icons8_Agreement_Delete_50px.png" />
+    <None Include="Resources\icons8_paid_bill_filled_50px.png" />
+    <None Include="Resources\icons8_delete_file_50px.png" />
+    <None Include="Resources\icons8_delete_file_filled_50px.png" />
+    <None Include="Resources\icons8_general_ledger_filled_50px.png" />
+    <None Include="Resources\icons8_pie_chart_report_filled_50px.png" />
+    <None Include="Resources\icons8_initiate_money_transfer_filled_50px.png" />
+    <None Include="Resources\icons8_no_cash_filled_50px.png" />
+    <None Include="Resources\icons8_request_money_filled_50px.png" />
+    <None Include="Resources\icons8_full_trash_filled_50px.png" />
+    <None Include="Resources\icons8_discount_filled_50px.png" />
+    <None Include="Resources\icons8_cashflow_filled_50px.png" />
+    <None Include="Resources\icons8_autograph_filled_50px.png" />
+    <None Include="Resources\icons8_money_transfer_filled_50px.png" />
+    <None Include="Resources\icons8_car_dealership_building_filled_50px.png" />
+    <None Include="Resources\icons8_bank_building_filled_50px.png" />
+    <None Include="Resources\icons8_voice_presentation_filled_50px.png" />
+    <None Include="Resources\icons8_buy_filled_50px.png" />
+    <None Include="Resources\icons8_depot_filled_50px.png" />
+    <None Include="Resources\icons8_move_stock_filled_50px.png" />
+    <None Include="Resources\icons8_airport_transfer_filled_50px.png" />
+    <None Include="Resources\icons8_in_transit_filled_50px.png" />
+    <None Include="Resources\icons8_shipped_filled_50px.png" />
+    <None Include="Resources\icons8_blog_filled_50px.png" />
+    <None Include="Resources\icons8_documents_folder_filled_50px.png" />
+    <None Include="Resources\icons8_ubuntu_filled_50px.png" />
+    <None Include="Resources\icons8_send_hot_list_filled_50px.png" />
+    <None Include="Resources\icons8_overtime_filled_50px.png" />
+    <None Include="Resources\icons8_key_exchange_filled_50px.png" />
+    <None Include="Resources\icons8_collaboration_filled_50px.png" />
+    <None Include="Resources\icons8_tear_off_calendar_filled_50px.png" />
+    <None Include="Resources\icons8_critical_thinking_filled_50px.png" />
+    <None Include="Resources\icons8_treatment_plan_filled_50px.png" />
+    <None Include="Resources\icons8_view_shedule_filled_50px.png" />
+    <None Include="Resources\icons8_calendar_10_filled_50px.png" />
+    <None Include="Resources\icons8_alarm_filled_50px.png" />
+    <None Include="Resources\icons8_comment_discussion_filled_50px.png" />
+    <None Include="Resources\icons8_stairs_up_filled_50px.png" />
+    <None Include="Resources\icons8_bullish_filled_50px.png" />
+    <None Include="Resources\icons8_shortlist_filled_50px.png" />
+    <None Include="Resources\icons8_key_2_filled_50px.png" />
+    <None Include="Resources\LichSu1.png" />
+    <None Include="Resources\icons8_rescheduling_a_task_filled_50px.png" />
+    <None Include="Resources\icons8_truck_checked_filled_50px.png" />
+    <None Include="Resources\icons8_uk_news_filled_50px.png" />
+    <None Include="Resources\icons8_email_document_filled_50px.png" />
+    <None Include="Resources\icons8_refund_filled_50px.png" />
+    <None Include="Resources\list4.png" />
+    <None Include="Resources\Checklist2.png" />
+    <None Include="Resources\Checklist5.png" />
+    <None Include="Resources\Checklist4.png" />
+    <None Include="Resources\icons8_past_filled_50px.png" />
+    <None Include="Resources\icons8_Enterprise_Resource_Planning_50px.png" />
+    <None Include="Resources\icons8_timetable_filled_50px.png" />
+    <None Include="Resources\icons8_permanent_job_filled_50px.png" />
+    <None Include="Resources\icons8_coins_filled_50px.png" />
+    <None Include="Resources\icons8_crowdfunding_filled_50px.png" />
+    <None Include="Resources\icons8_diploma_1_50px_1.png" />
+    <None Include="Resources\icons8_agreement_50px.png" />
+    <None Include="Resources\icons8_policy_document_filled_50px.png" />
+    <None Include="Resources\icons8_duration_finance_filled_50px.png" />
+    <None Include="Resources\icons8_work_light_filled_50px.png" />
+    <None Include="Resources\icons8_ballot_50px.png" />
+    <None Include="Resources\icons8_genealogy_filled_50px.png" />
+    <None Include="Resources\icons8_genealogy_50px.png" />
+    <None Include="Resources\icons8_open_document_50px.png" />
+    <None Include="Resources\icons8_upload_document_50px.png" />
+    <None Include="Resources\icons8_collage_50px.png" />
+    <None Include="Resources\Open2.png" />
+    <None Include="Resources\bo_vendor.svg" />
+    <None Include="Resources\bo_vendor1.svg" />
+    <None Include="Resources\icons8_add_contact_to_company_filled_50px.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\icons8_bullish_filled_50px1.png" />
+    <Content Include="Resources\play.png" />
+    <None Include="Resources\Setting1.png" />
+    <None Include="Resources\sap.png" />
+    <Content Include="Resources\stop1.png" />
+    <None Include="Resources\Works-in-progress-icon.png" />
+    <None Include="Resources\Swimming-Pool.png" />
+    <None Include="Resources\tag_64.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\suppliers.png" />
+    <None Include="Service References\UploadService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UploadService\configuration.svcinfo" />
+    <None Include="Service References\UploadService\configuration91.svcinfo" />
+    <None Include="Service References\UploadService\FileUploader.disco" />
+    <None Include="Service References\SupportService\configuration.svcinfo" />
+    <None Include="Service References\SupportService\configuration91.svcinfo" />
+    <None Include="Service References\SupportService\support.disco" />
+    <None Include="Resources\select16.png" />
+    <None Include="Resources\service.png" />
+    <None Include="Resources\view_list32.png" />
+    <None Include="Resources\power_basic_red.png" />
+    <None Include="Resources\Prescription.png" />
+    <None Include="Resources\task4.png" />
+    <None Include="Resources\peoples48.png" />
+    <None Include="Resources\template.png" />
+    <None Include="Resources\warning_48.png" />
+    <None Include="Resources\Task_list.png" />
+    <None Include="Resources\scheduler.png" />
+    <None Include="Resources\synchronize_basic_blue.png" />
+    <None Include="Resources\question_basic_blue.png" />
+    <None Include="Resources\update-48.png" />
+    <None Include="Resources\testimonials.png" />
+    <None Include="Resources\pipe.png" />
+    <None Include="Resources\program_defaults.png" />
+    <None Include="Resources\sgnr_landsoft-building.jpg" />
+    <None Include="Resources\stock_calendar_and_tasks32 [].png" />
+    <None Include="Resources\1338260699_preferences-contact-list.png" />
+    <None Include="Resources\1337999870_people.png" />
+    <None Include="Resources\add-notes.png" />
+    <None Include="Resources\add-tag48.png" />
+    <None Include="Resources\add-tag481.png" />
+    <Content Include="Resources\add_32.png" />
+    <Content Include="Resources\Alarm_clock.png" />
+    <Content Include="Resources\appointment_new [].png" />
+    <Content Include="Resources\bgBuilding.jpg" />
+    <None Include="Resources\centrejust.png" />
+    <None Include="Resources\category_settings-64.png" />
+    <None Include="Resources\category-orange.png" />
+    <None Include="Resources\cost.png" />
+    <None Include="Resources\building.png" />
+    <None Include="Resources\companies48.png" />
+    <None Include="Resources\choice-48.png" />
+    <None Include="Resources\Company.png" />
+    <Content Include="Resources\demo_landsoft-building1.jpg" />
+    <None Include="Resources\dip.png" />
+    <None Include="Resources\demo_landsoft-buildingDX.jpg" />
+    <None Include="Resources\demo_landsoft-building_Charm.jpg" />
+    <None Include="Resources\exercise_3D-64.png" />
+    <None Include="Resources\email_compose.png" />
+    <Content Include="Resources\exit.png" />
+    <None Include="Resources\LandSoft1.ico" />
+    <None Include="Resources\LandSoft.ico" />
+    <None Include="Resources\LandSoft1.bmp" />
+    <None Include="Resources\landsoft-buildingFord.jpg" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\landsofSacomReal.jpg" />
+    <None Include="Resources\landsoft_building.png" />
+    <None Include="Resources\help_48.png" />
+    <None Include="Resources\information-blue.png" />
+    <None Include="Resources\field.png" />
+    <None Include="Resources\lock_basic_red.png" />
+    <None Include="Resources\language.png" />
+    <None Include="Resources\flag_vietnam.png" />
+    <None Include="Resources\log.png" />
+    <None Include="Resources\lock blue.png" />
+    <None Include="Resources\key_basic_yellow.png" />
+    <None Include="Resources\ftp.png" />
+    <None Include="Resources\History-Folder-Blue-icon.png" />
+    <None Include="Resources\History-Folder-Blue-icon1.png" />
+    <Content Include="Resources\faucet32.png" />
+    <Content Include="Resources\LOGO_LANDSOFTBUILDING.gif" />
+    <None Include="Resources\management.png" />
+    <None Include="Resources\Mail.png" />
+    <None Include="Resources\Mail1.png" />
+    <Content Include="Resources\nen_landsoftbuilding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SupportService\" />
+    <WCFMetadataStorage Include="Service References\UploadService\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

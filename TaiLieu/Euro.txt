@@ -1,0 +1,355 @@
+Data Source=45.119.82.176,14332;Initial Catalog=Building_EuroWindow_db;Persist Security Info=True;User ID=Building_Euro_login;Password=Euro-Dip_NhaTrang1@3
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[sapin_GetDataKiemTraTonTaiKH]
+------------------------------------------------
+
+INSERT INTO dbo.TaiKhoanDongBo
+(
+    ID,
+    TypeID,
+    TypeName,
+    LinkAPI,
+    Directional,
+    UserName,
+    Password
+)
+VALUES
+(   NEWID(), -- ID - uniqueidentifier
+    1, -- TypeID - int
+    'SAP', -- TypeName - nvarchar(500)
+    N'https://dev-s4happ01.eurowindow-holding.com:44300/', -- LinkAPI - nvarchar(1000)
+    N'ls2sap/sap-in', -- Directional - nvarchar(1000)
+    N'LANDSOFT', -- UserName - nvarchar(1000)
+    N'hHJU5Ud5x9'  -- Password - nvarchar(1000)
+    )
+----------------------------------------------------
+-- =============================================
+
+ALTER PROCEDURE [dbo].[sapin_tnKhachHang_GetList]
+
+---------------------------------------------
+create PROCEDURE [dbo].[sapin_save_log_request_api]
+
+--------------------------------------------
+UPDATE dbo.Tinh SET MaQG = 1 WHERE ISNULL(MaQG,0) = 0
+-----------------------------------
+
+ALTER PROCEDURE [dbo].[sapin_ZIMD005Data]
+
+------------------------
+CREATE PROCEDURE [dbo].[sapin_ZIMD005Data_Update]
+
+----------------------
+CREATE PROCEDURE [dbo].[sapin_ZIMD005Data_1]
+
+----------------------------
+
+-- exec cnGetDebitNote1 2719, 12,2023,0
+ALTER PROCEDURE [dbo].[cnGetDebitNote1] 
+
+
+------------------------
+ALTER TABLE dbo.tnToaNha
+ADD TenNgan NVARCHAR(1000)
+----=>>>>>> 
+
+-----------------------------
+CREATE TABLE tnTieuDuAn
+(
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	ZZTIEUDUAN NVARCHAR(1000) NULL,
+	TNTIEUDA NVARCHAR(1000) NULL,
+	TENTDA NVARCHAR(1000) NULL,
+	MATN TINYINT NULL
+)
+---=>>>>>> ok
+----------------------------
+CREATE TABLE tnCongTrinh
+(
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	ZZCONGTRIN NVARCHAR(1000) NULL,
+	TNCONGTRIN NVARCHAR(1000) NULL,
+	TENCTRINH NVARCHAR(1000) NULL
+)
+ok
+---------------------------
+ALTER TABLE dbo.tnCongTrinh
+ADD MaTieuDuAn INT
+okkkk
+--------------------------
+ALTER TABLE dbo.mbNhomMatBang
+ADD TenVT NVARCHAR(1000)
+ok
+-------------------------
+https://api-landsoft-uat.eurowindow-holding.com/
+
+-----------------------------
+ALTER TABLE dbo.mbKhoiNha
+ADD MaCongTrinh INT
+ok
+---------------
+mbMatBang_GetData
+---------------
+CREATE TABLE CompanyCode
+(
+	ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	KyHieu NVARCHAR(1000),
+	TenVT NVARCHAR(1000),
+	Ten NVARCHAR(3000),
+	MaSoThue NVARCHAR(50),
+	DiaChi NVARCHAR(3000),
+	MaQuocGia INT,
+	MaTinh INT,
+	MaLoaiTien INT
+)
+ok
+-- Cần 1 bạn làm insert, update, delete danh sách danh mục company code
+- Import danh sách đồng tiền hạch toán
+ALTER TABLE dbo.CompanyCode
+ADD TenTinh NVARCHAR(1000)
+
+ALTER TABLE dbo.CompanyCode
+ADD ControllingArea NVARCHAR(1000)
+
+INSERT INTO dbo.CompanyCode
+(
+    KyHieu,
+    TenVT,
+    Ten,
+    MaSoThue,
+    DiaChi,
+    MaQuocGia,
+    MaTinh,
+    MaLoaiTien,
+	TenTinh,
+	ControllingArea
+)
+VALUES
+(   N'E001', -- KyHieu - nvarchar(1000)
+    N'EWH', -- TenVT - nvarchar(1000)
+    N'EUROWINDOW HOLDING', -- Ten - nvarchar(3000)
+    N'2500271160', -- MaSoThue - nvarchar(50)
+    N'Tầng 16 số 2 Tôn Thất Tùng, Phường Trung Tự, Quận Đống Đa, Hà Nội', -- DiaChi - nvarchar(3000)
+    1, -- MaQuocGia - int
+    3, -- MaTinh - int
+    1,  -- MaLoaiTien - int
+	N'Hà Nội',
+	N'EWHC'
+    )
+
+-- Cần thiết kê thêm cột companycode ở bảng hóa đơn, cho phép sửa được cột này trong edit =>> Còn thiếu tự động chọn loại dịch vụ thì dựa vào bảng mapping doanh thu để tự động cập nhật company code nếu company code đang = null
+-- Cần thiết kê trong tạo hóa đơn tự động, tự gắn company code vào
+- cần thiết kế thêm nút cập nhật companycode cho tất cả hóa đơn cũ chưa có company code
+
+ok
+
+ALTER TABLE dbo.dvHoaDon
+ADD CompanyCode INT
+
+CREATE TABLE CuDanCDT
+(
+	ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	Name NVARCHAR(1000)
+)
+
+ok
+INSERT INTO dbo.CuDanCDT (Name) VALUES ('CUDAN')
+INSERT INTO dbo.CuDanCDT (Name) VALUES ('CHUDAUTU')
+INSERT INTO dbo.CuDanCDT (Name) VALUES ('CHOTHUE')
+
+-- trong danh sách loại dịch vụ, cần thiết kế thêm cột để lưu và chỉnh giá trị này
+ALTER TABLE dbo.dvLoaiDichVu
+ADD TenVT NVARCHAR(1000)
+
+ok
+
+-- Cần thiết kế bảng mapping doanh thu, cho phép thêm, xóa, sửa như 1 danh mục, import càng tốt
+CREATE TABLE MappingDoanhThu
+(
+	ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	MaTN TINYINT,
+	MaKN INT,
+	CompanyCode INT,
+	MaLDV INT,
+	MaCuDanCDT INT
+)
+
+INSERT INTO dbo.MappingDoanhThu
+(
+    MaTN,
+    MaKN,
+    CompanyCode,
+    MaLDV,
+    MaCuDanCDT
+)
+VALUES
+(   1, -- MaTN - tinyint
+    37, -- MaKN - int
+    1, -- CompanyCode - int
+    13, -- MaLDV - int
+    1  -- MaCuDanCDT - int
+    )
+
+ALTER TABLE dbo.dvHoaDon
+ADD SAP_HD NVARCHAR(1000)
+==> đồng bộ 08 thành công sẽ trả về mã này
+
+ALTER TABLE dbo.dvHoaDon
+ADD IsDuyetDongBoSAP BIT
+=> đã có tính năng duyệt đồng bộ
+
+ALTER TABLE dbo.dvLoaiDichVu
+ADD MaLoaiPhieu NVARCHAR(1000)
+ok
+
+ALTER TABLE dbo.dvHoaDon
+ADD SoHopDong NVARCHAR(1000)
+--=> tự update trong list sap 08
+
+	ALTER TABLE dbo.dvHoaDon
+	ADD TAX_AMOUNT DECIMAL(18,0)
+=>> Tự update trong list sap 08
+
+	ALTER TABLE dbo.dvHoaDon
+	ADD TAXMT_AMOUNT DECIMAL(18,0)
+=> Tự update trong list sap 08
+
+ ALTER TABLE dbo.dvHoaDon
+ ADD MaCuDanCDT NVARCHAR(1000)
+=> tự update trong list sap 08 luoôn đi
+
+ALTER TABLE dbo.dvHoaDon
+ADD SAP_MSG NVARCHAR(max)
+
+ALTER TABLE dbo.ptPhanLoai
+ADD TenVT NVARCHAR(1000)
+ok
+
+-- Thêm loại dịch vụ + companycode vào chi tiết phiếu thu  + sổ quỹ
+-- cho phép người dùng chọn và chỉnh trên giao diện
+-- Khấu trừ ở phiếu thu, phải chủ động chọn company code, khi chọn company code xong, nó tự load lại số tiền
+-- Khaấu trừ tự động thì ngon lành hơn, phải group theo số tiền của quỹ để khấu trừ
+
+ALTER TABLE dbo.ptChiTietPhieuThu
+ADD MaLDV INT
+
+ALTER TABLE dbo.ptChiTietPhieuThu
+ADD CompanyCode INT
+
+ALTER TABLE dbo.SoQuy_ThuChi
+ADD MaLDV INT
+
+ALTER TABLE dbo.SoQuy_ThuChi
+ADD CompanyCode INT
+
+CREATE TABLE MappingPhieuThu
+(
+	ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	MaTN TINYINT,
+	MaKN INT,
+	MaLoaiPT INT,
+	CompanyCode INT
+)
+
+ALTER TABLE dbo.SoQuy_ThuChi
+ADD SAP_PT NVARCHAR(1000)
+
+ALTER TABLE dbo.nhNganHang
+ADD HOUSE_BANK NVARCHAR(1000)
+-- Viết đồng bộ tất cả theo số hóa đơn ziar008
+-- đồng bô5  tất cả theo số phiếu thu
+-- Bỏ, vì có company code, mà company code đặt ở header.
+
+ALTER TABLE dbo.SoQuy_ThuChi
+ADD SAP_MSG NVARCHAR(1000)
+
+ALTER TABLE dbo.soquy_thuchi
+ADD IsDuyetDongBoSAP BIT
+
+---------------
+ccCompanyCode_Get
+dvHoaDon_Insertall
+dv_hoadon_load_hoa_don
+dv_hoadon_loadhoadon_matbang
+tbp_save_so_lan_in
+app_payment_load
+sq_Update bv
+pt_Update
+-----
+
+CREATE TABLE MappingNhomMatBang
+(
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	NMBSAP NVARCHAR(MAX),
+	MaNMB INT
+)
+
+UPDATE dbo.tnKhachHang SET CMND = CtyMaSoThue WHERE  IsCaNhan = 0 AND ISNULL(CtyMaSoThue,'') <> ''
+
+UPDATE dbo.tnKhachHang SET CtyMaSoThue = CMND WHERE IsCaNhan = 1 AND ISNULL(CMND,'') <> ''
+
+tnkhachhang_copy
+
+ALTER TABLE dbo.dvgxLoaiXe
+ADD MaDichVu NVARCHAR(1000)
+
+ALTER DATABASE [Building_EuroWindow_db] SET COMPATIBILITY_LEVEL = 130
+
+ALTER TABLE dbo.dvHoaDon 
+ADD MSG_TYPE NVARCHAR(100)
+
+ALTER TABLE dbo.dvHoaDon 
+ADD TYPE NVARCHAR(100)
+
+ALTER TABLE dbo.dvHoaDonDaXoa 
+ADD MSG_TYPE NVARCHAR(100)
+
+ALTER TABLE dbo.dvHoaDonDaXoa
+ADD TYPE NVARCHAR(100)
+
+ALTER TABLE dbo.dvHoaDonDaXoa
+ADD SAP_MSG NVARCHAR(max)
+
+ALTER TABLE dbo.dvHoaDonDaXoa
+ADD SAP_HD NVARCHAR(1000)
+
+
+ALTER TABLE dbo.dvHoaDonDaXoa
+ADD IsDuyetDongBoSAP BIT
+
+
+
+
+ALTER TABLE dbo.dvHoaDonDaXoa
+ADD SoHopDong NVARCHAR(1000)
+
+
+	ALTER TABLE dbo.dvHoaDonDaXoa
+	ADD TAX_AMOUNT DECIMAL(18,0)
+
+
+	ALTER TABLE dbo.dvHoaDonDaXoa
+	ADD TAXMT_AMOUNT DECIMAL(18,0)
+
+
+ ALTER TABLE dbo.dvHoaDonDaXoa
+ ADD MaCuDanCDT NVARCHAR(1000)
+
+ptChiTietPhieuThuDaXoa_Insert
+-----------
+ALTER TABLE dbo.dvHoaDon
+ADD SOHDDT NVARCHAR(1000)
+
+ALTER TABLE dbo.dvHoaDon
+ADD NGAYHDDT DATETIME
+
+sapEuro_ZIHD001_Update
+
+sapIn_Log
+
+ALTER DATABASE [Building_EuroWindow_db] SET COMPATIBILITY_LEVEL = 130

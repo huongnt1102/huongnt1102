@@ -1,0 +1,45 @@
+﻿* 26-06-2013
+- create table dvTongHop
+- add column KeyID (dvdnDien, dvdnNuoc, dvGas) - relationship with dvTongHop
+- add column Total (mbMatBang)
+
+delete dvgxTheXe
+delete dvdnDien
+delete dvdnNuoc
+delete dvGas
+delete PhieuThu
+delete ptChiTiet
+delete PhiQuanLy
+delete xkXuatKho
+delete PhiVeSinh
+delete mbLichSuSuDung
+delete thueCongNo
+delete thueHopDong
+delete dvtmTheThangMay
+delete dvTongHop
+delete mbMatBang
+delete cnCongNo
+delete cnLichSu
+delete hthtCongNo
+delete tnKhachHang
+
+
+DBCC CHECKIDENT ('dbo.dvgxTheXe', RESEED, 0)
+DBCC CHECKIDENT ('dbo.dvdnDien', RESEED, 0)
+DBCC CHECKIDENT ('dbo.dvdnNuoc', RESEED, 0)
+DBCC CHECKIDENT ('dbo.dvGas', RESEED, 0)
+DBCC CHECKIDENT ('dbo.PhieuThu', RESEED, 0)
+DBCC CHECKIDENT ('dbo.ptChiTiet', RESEED, 0)
+DBCC CHECKIDENT ('dbo.PhiQuanLy', RESEED, 0)
+DBCC CHECKIDENT ('dbo.xkXuatKho', RESEED, 0)
+DBCC CHECKIDENT ('dbo.PhiVeSinh', RESEED, 0)
+DBCC CHECKIDENT ('dbo.mbLichSuSuDung', RESEED, 0)
+DBCC CHECKIDENT ('dbo.thueCongNo', RESEED, 0)
+DBCC CHECKIDENT ('dbo.thueHopDong', RESEED, 0)
+DBCC CHECKIDENT ('dbo.dvtmTheThangMay', RESEED, 0)
+DBCC CHECKIDENT ('dbo.dvTongHop', RESEED, 0)
+DBCC CHECKIDENT ('dbo.mbMatBang', RESEED, 0)
+DBCC CHECKIDENT ('dbo.cnCongNo', RESEED, 0)
+DBCC CHECKIDENT ('dbo.cnLichSu', RESEED, 0)
+DBCC CHECKIDENT ('dbo.hthtCongNo', RESEED, 0)
+DBCC CHECKIDENT ('dbo.tnKhachHang', RESEED, 0)

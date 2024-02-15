@@ -1,0 +1,23 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BuildingService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MailServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="YourMail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mail@gmail.com</Value>
+    </Setting>
+    <Setting Name="MailPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mypassword</Value>
+    </Setting>
+    <Setting Name="building_dbConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=112.213.94.77;Initial Catalog=building_db;Persist Security Info=True;User ID=Building_login;Password=dipvn-@&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=112.213.94.77;Initial Catalog=building_db;Persist Security Info=True;User ID=Building_login;Password=dipvn-@</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

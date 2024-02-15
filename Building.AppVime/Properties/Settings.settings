@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Building.AppVime.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="apiKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">api</Value>
+    </Setting>
+    <Setting Name="secretKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">secret</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

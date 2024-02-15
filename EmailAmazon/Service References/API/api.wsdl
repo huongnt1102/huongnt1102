@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Info">
+        <s:complexType />
+      </s:element>
+      <s:element name="InfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaiKhoan_SoDu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaiKhoan_SoDuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTaiKhoan_SoDuResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckTaiKhoan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckTaiKhoanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckTaiKhoanResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditThuongHieu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TenTH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DienGiai" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TenNV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditThuongHieuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditThuongHieuResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="Result">
+        <s:restriction base="s:string">
+          <s:enumeration value="KhongXacDinh" />
+          <s:enumeration value="TaiKhoanKhongTontai" />
+          <s:enumeration value="DaSuDung" />
+          <s:enumeration value="ThuongHieuDaTonTai" />
+          <s:enumeration value="EmailKhongHhopLe" />
+          <s:enumeration value="TaiKhoanKhongDuTien" />
+          <s:enumeration value="MauMailDaTonTai" />
+          <s:enumeration value="NhomKhachHangDaTonTai" />
+          <s:enumeration value="ThanhCong" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="DeleteThuongHieu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteThuongHieuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteThuongHieuResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetThuongHieu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetThuongHieuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetThuongHieuResult" type="tns:ArrayOfThuongHieu" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThuongHieu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThuongHieu" nillable="true" type="tns:ThuongHieu" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThuongHieu">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenTH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienGiai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DetailThuongHieu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailThuongHieuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailThuongHieuResult" type="tns:ThuongHieu" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditMauMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TieuDe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoiDung" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TenNV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditMauMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditMauMailResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMauMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMauMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteMauMailResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMauMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMauMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMauMailResult" type="tns:ArrayOfMauMail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMauMail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MauMail" nillable="true" type="tns:MauMail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MauMail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TieuDe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoiDung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DetailMauMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailMauMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailMauMailResult" type="tns:MauMail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditNhomKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TenNKH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DienGiai" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TenNV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditNhomKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditNhomKhachHangResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteNhomKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteNhomKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteNhomKhachHangResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNhomKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNhomKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNhomKhachHangResult" type="tns:ArrayOfNhomKhachHang" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNhomKhachHang">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NhomKhachHang" nillable="true" type="tns:NhomKhachHang" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NhomKhachHang">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenNKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienGiai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TongGui" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThanhCong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThatBai" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DetailNhomKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailNhomKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailNhomKhachHangResult" type="tns:NhomKhachHang" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaNKHbyMaCD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaCD" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaNKHbyMaCDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMaNKHbyMaCDResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNhomKhachHangTheoChienDich">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaCD" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNhomKhachHangTheoChienDichResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNhomKhachHangTheoChienDichResult" type="tns:ArrayOfNhomKhachHang" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaNKH" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="KhachHangs" type="tns:ArrayOfKhachHang" />
+            <s:element minOccurs="0" maxOccurs="1" name="TenNV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfKhachHang">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KhachHang" nillable="true" type="tns:KhachHang" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KhachHang">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XungHo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NgaySinh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienThoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenNKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KQKT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EditKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditKhachHangResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArrID" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteKhachHangResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteKhachHangByEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Emails" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteKhachHangByEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteKhachHangByEmailResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaNKH" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKhachHangResult" type="tns:ArrayOfKhachHang" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKhachHangTheoChienDich">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaCD" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaTT" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKhachHangTheoChienDichResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKhachHangTheoChienDichResult" type="tns:ArrayOfKhachHang" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditChienDich">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChienDich" type="tns:deChienDich" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="deChienDich">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTK" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TieuDe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoiDung" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayGui" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenTH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTT" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="KichHoat" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="KetQuaGui" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="decdNhomKHs" type="tns:ArrayOfDecdNhomKH" />
+          <s:element minOccurs="0" maxOccurs="1" name="decdChiTiets" type="tns:ArrayOfDecdChiTiet" />
+          <s:element minOccurs="0" maxOccurs="1" name="decdTrangThaiChienDich" type="tns:decdTrangThaiChienDich" />
+          <s:element minOccurs="0" maxOccurs="1" name="deTaiKhoan" type="tns:deTaiKhoan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDecdNhomKH">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="decdNhomKH" nillable="true" type="tns:decdNhomKH" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="decdNhomKH">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaCD" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNKH" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="deNhomKhachHang" type="tns:deNhomKhachHang" />
+          <s:element minOccurs="0" maxOccurs="1" name="deChienDich" type="tns:deChienDich" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="deNhomKhachHang">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTK" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenNKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienGiai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="decdNhomKHs" type="tns:ArrayOfDecdNhomKH" />
+          <s:element minOccurs="0" maxOccurs="1" name="deKhachHangs" type="tns:ArrayOfDeKhachHang" />
+          <s:element minOccurs="0" maxOccurs="1" name="deTaiKhoan" type="tns:deTaiKhoan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDeKhachHang">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="deKhachHang" nillable="true" type="tns:deKhachHang" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="deKhachHang">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNKH" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="XungHo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienThoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NgaySinh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTK" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="KQKT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="deNhomKhachHang" type="tns:deNhomKhachHang" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="deTaiKhoan">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaHD" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KhoaTK" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoLuong" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienGiai" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNVN" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNVS" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaDIP" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="deThuongHieus" type="tns:ArrayOfDeThuongHieu" />
+          <s:element minOccurs="0" maxOccurs="1" name="deMauMails" type="tns:ArrayOfDeMauMail" />
+          <s:element minOccurs="0" maxOccurs="1" name="deNhomKhachHangs" type="tns:ArrayOfDeNhomKhachHang" />
+          <s:element minOccurs="0" maxOccurs="1" name="deChienDiches" type="tns:ArrayOfDeChienDich" />
+          <s:element minOccurs="0" maxOccurs="1" name="deDIPACCOUNT" type="tns:deDIPACCOUNT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDeThuongHieu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="deThuongHieu" nillable="true" type="tns:deThuongHieu" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="deThuongHieu">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTK" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenTH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienGiai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="deTaiKhoan" type="tns:deTaiKhoan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDeMauMail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="deMauMail" nillable="true" type="tns:deMauMail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="deMauMail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TieuDe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoiDung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTK" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="deTaiKhoan" type="tns:deTaiKhoan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDeNhomKhachHang">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="deNhomKhachHang" nillable="true" type="tns:deNhomKhachHang" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDeChienDich">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="deChienDich" nillable="true" type="tns:deChienDich" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="deDIPACCOUNT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Port" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Server" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnableSsl" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNVN" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNVS" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="deTaiKhoans" type="tns:ArrayOfDeTaiKhoan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDeTaiKhoan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="deTaiKhoan" nillable="true" type="tns:deTaiKhoan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDecdChiTiet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="decdChiTiet" nillable="true" type="tns:decdChiTiet" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="decdChiTiet">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaCD" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTT" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNKH" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="XungHo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienThoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NgaySinh" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayGui" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="decdTrangThaiGui" type="tns:decdTrangThaiGui" />
+          <s:element minOccurs="0" maxOccurs="1" name="deChienDich" type="tns:deChienDich" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="decdTrangThaiGui">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="STT" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenTT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="decdChiTiets" type="tns:ArrayOfDecdChiTiet" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="decdTrangThaiChienDich">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="STT" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenTT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="deChienDiches" type="tns:ArrayOfDeChienDich" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EditChienDichResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditChienDichResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditChienDichKichHoat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="KichHoat" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditChienDichKichHoatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditChienDichKichHoatResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteChienDich">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteChienDichResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteChienDichResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChienDich">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DenNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChienDichResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChienDichResult" type="tns:ArrayOfChienDich" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfChienDich">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChienDich" nillable="true" type="tns:ChienDich" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChienDich">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TieuDe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoiDung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenTH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KichHoat" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayGui" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTT" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenTT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KetQuaGui" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TongGui" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThanhCong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThatBai" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhap" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiSua" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySua" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetChienDichTheoNhomKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaNKH" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChienDichTheoNhomKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChienDichTheoNhomKhachHangResult" type="tns:ArrayOfChienDich" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailChienDich">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailChienDichResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailChienDichResult" type="tns:ChienDich" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Display" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Reply" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMailResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMailTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMailTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMailTestResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTruongTron">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTruongTronResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTruongTronResult" type="tns:ArrayOfTruongTron" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTruongTron">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TruongTron" nillable="true" type="tns:TruongTron" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TruongTron">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="KyHieu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienGiai" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InfoSoapIn">
+    <wsdl:part name="parameters" element="tns:Info" />
+  </wsdl:message>
+  <wsdl:message name="InfoSoapOut">
+    <wsdl:part name="parameters" element="tns:InfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaiKhoan_SoDuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaiKhoan_SoDu" />
+  </wsdl:message>
+  <wsdl:message name="GetTaiKhoan_SoDuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaiKhoan_SoDuResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckTaiKhoanSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckTaiKhoan" />
+  </wsdl:message>
+  <wsdl:message name="CheckTaiKhoanSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckTaiKhoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditThuongHieuSoapIn">
+    <wsdl:part name="parameters" element="tns:EditThuongHieu" />
+  </wsdl:message>
+  <wsdl:message name="EditThuongHieuSoapOut">
+    <wsdl:part name="parameters" element="tns:EditThuongHieuResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteThuongHieuSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteThuongHieu" />
+  </wsdl:message>
+  <wsdl:message name="DeleteThuongHieuSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteThuongHieuResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetThuongHieuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetThuongHieu" />
+  </wsdl:message>
+  <wsdl:message name="GetThuongHieuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetThuongHieuResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailThuongHieuSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailThuongHieu" />
+  </wsdl:message>
+  <wsdl:message name="DetailThuongHieuSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailThuongHieuResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditMauMailSoapIn">
+    <wsdl:part name="parameters" element="tns:EditMauMail" />
+  </wsdl:message>
+  <wsdl:message name="EditMauMailSoapOut">
+    <wsdl:part name="parameters" element="tns:EditMauMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMauMailSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMauMail" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMauMailSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMauMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMauMailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMauMail" />
+  </wsdl:message>
+  <wsdl:message name="GetMauMailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMauMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailMauMailSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailMauMail" />
+  </wsdl:message>
+  <wsdl:message name="DetailMauMailSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailMauMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditNhomKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:EditNhomKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="EditNhomKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:EditNhomKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteNhomKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteNhomKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="DeleteNhomKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteNhomKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNhomKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNhomKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="GetNhomKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNhomKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailNhomKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailNhomKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="DetailNhomKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailNhomKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaNKHbyMaCDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaNKHbyMaCD" />
+  </wsdl:message>
+  <wsdl:message name="GetMaNKHbyMaCDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaNKHbyMaCDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNhomKhachHangTheoChienDichSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNhomKhachHangTheoChienDich" />
+  </wsdl:message>
+  <wsdl:message name="GetNhomKhachHangTheoChienDichSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNhomKhachHangTheoChienDichResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:EditKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="EditKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:EditKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="DeleteKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteKhachHangByEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteKhachHangByEmail" />
+  </wsdl:message>
+  <wsdl:message name="DeleteKhachHangByEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteKhachHangByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="GetKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKhachHangTheoChienDichSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKhachHangTheoChienDich" />
+  </wsdl:message>
+  <wsdl:message name="GetKhachHangTheoChienDichSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKhachHangTheoChienDichResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditChienDichSoapIn">
+    <wsdl:part name="parameters" element="tns:EditChienDich" />
+  </wsdl:message>
+  <wsdl:message name="EditChienDichSoapOut">
+    <wsdl:part name="parameters" element="tns:EditChienDichResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditChienDichKichHoatSoapIn">
+    <wsdl:part name="parameters" element="tns:EditChienDichKichHoat" />
+  </wsdl:message>
+  <wsdl:message name="EditChienDichKichHoatSoapOut">
+    <wsdl:part name="parameters" element="tns:EditChienDichKichHoatResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteChienDichSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteChienDich" />
+  </wsdl:message>
+  <wsdl:message name="DeleteChienDichSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteChienDichResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChienDichSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChienDich" />
+  </wsdl:message>
+  <wsdl:message name="GetChienDichSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChienDichResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChienDichTheoNhomKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChienDichTheoNhomKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="GetChienDichTheoNhomKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChienDichTheoNhomKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailChienDichSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailChienDich" />
+  </wsdl:message>
+  <wsdl:message name="DetailChienDichSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailChienDichResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMailTestSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMailTest" />
+  </wsdl:message>
+  <wsdl:message name="SendMailTestSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMailTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTruongTronSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTruongTron" />
+  </wsdl:message>
+  <wsdl:message name="GetTruongTronSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTruongTronResponse" />
+  </wsdl:message>
+  <wsdl:portType name="APISoap">
+    <wsdl:operation name="Info">
+      <wsdl:input message="tns:InfoSoapIn" />
+      <wsdl:output message="tns:InfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaiKhoan_SoDu">
+      <wsdl:input message="tns:GetTaiKhoan_SoDuSoapIn" />
+      <wsdl:output message="tns:GetTaiKhoan_SoDuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTaiKhoan">
+      <wsdl:input message="tns:CheckTaiKhoanSoapIn" />
+      <wsdl:output message="tns:CheckTaiKhoanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditThuongHieu">
+      <wsdl:input message="tns:EditThuongHieuSoapIn" />
+      <wsdl:output message="tns:EditThuongHieuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteThuongHieu">
+      <wsdl:input message="tns:DeleteThuongHieuSoapIn" />
+      <wsdl:output message="tns:DeleteThuongHieuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThuongHieu">
+      <wsdl:input message="tns:GetThuongHieuSoapIn" />
+      <wsdl:output message="tns:GetThuongHieuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailThuongHieu">
+      <wsdl:input message="tns:DetailThuongHieuSoapIn" />
+      <wsdl:output message="tns:DetailThuongHieuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditMauMail">
+      <wsdl:input message="tns:EditMauMailSoapIn" />
+      <wsdl:output message="tns:EditMauMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMauMail">
+      <wsdl:input message="tns:DeleteMauMailSoapIn" />
+      <wsdl:output message="tns:DeleteMauMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMauMail">
+      <wsdl:input message="tns:GetMauMailSoapIn" />
+      <wsdl:output message="tns:GetMauMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailMauMail">
+      <wsdl:input message="tns:DetailMauMailSoapIn" />
+      <wsdl:output message="tns:DetailMauMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditNhomKhachHang">
+      <wsdl:input message="tns:EditNhomKhachHangSoapIn" />
+      <wsdl:output message="tns:EditNhomKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNhomKhachHang">
+      <wsdl:input message="tns:DeleteNhomKhachHangSoapIn" />
+      <wsdl:output message="tns:DeleteNhomKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNhomKhachHang">
+      <wsdl:input message="tns:GetNhomKhachHangSoapIn" />
+      <wsdl:output message="tns:GetNhomKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailNhomKhachHang">
+      <wsdl:input message="tns:DetailNhomKhachHangSoapIn" />
+      <wsdl:output message="tns:DetailNhomKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaNKHbyMaCD">
+      <wsdl:input message="tns:GetMaNKHbyMaCDSoapIn" />
+      <wsdl:output message="tns:GetMaNKHbyMaCDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNhomKhachHangTheoChienDich">
+      <wsdl:input message="tns:GetNhomKhachHangTheoChienDichSoapIn" />
+      <wsdl:output message="tns:GetNhomKhachHangTheoChienDichSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditKhachHang">
+      <wsdl:input message="tns:EditKhachHangSoapIn" />
+      <wsdl:output message="tns:EditKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKhachHang">
+      <wsdl:input message="tns:DeleteKhachHangSoapIn" />
+      <wsdl:output message="tns:DeleteKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKhachHangByEmail">
+      <wsdl:input message="tns:DeleteKhachHangByEmailSoapIn" />
+      <wsdl:output message="tns:DeleteKhachHangByEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKhachHang">
+      <wsdl:input message="tns:GetKhachHangSoapIn" />
+      <wsdl:output message="tns:GetKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKhachHangTheoChienDich">
+      <wsdl:input message="tns:GetKhachHangTheoChienDichSoapIn" />
+      <wsdl:output message="tns:GetKhachHangTheoChienDichSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditChienDich">
+      <wsdl:input message="tns:EditChienDichSoapIn" />
+      <wsdl:output message="tns:EditChienDichSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditChienDichKichHoat">
+      <wsdl:input message="tns:EditChienDichKichHoatSoapIn" />
+      <wsdl:output message="tns:EditChienDichKichHoatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChienDich">
+      <wsdl:input message="tns:DeleteChienDichSoapIn" />
+      <wsdl:output message="tns:DeleteChienDichSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChienDich">
+      <wsdl:input message="tns:GetChienDichSoapIn" />
+      <wsdl:output message="tns:GetChienDichSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChienDichTheoNhomKhachHang">
+      <wsdl:input message="tns:GetChienDichTheoNhomKhachHangSoapIn" />
+      <wsdl:output message="tns:GetChienDichTheoNhomKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailChienDich">
+      <wsdl:input message="tns:DetailChienDichSoapIn" />
+      <wsdl:output message="tns:DetailChienDichSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input message="tns:SendMailSoapIn" />
+      <wsdl:output message="tns:SendMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailTest">
+      <wsdl:input message="tns:SendMailTestSoapIn" />
+      <wsdl:output message="tns:SendMailTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTruongTron">
+      <wsdl:input message="tns:GetTruongTronSoapIn" />
+      <wsdl:output message="tns:GetTruongTronSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APISoap" type="tns:APISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Info">
+      <soap:operation soapAction="http://tempuri.org/Info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaiKhoan_SoDu">
+      <soap:operation soapAction="http://tempuri.org/GetTaiKhoan_SoDu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTaiKhoan">
+      <soap:operation soapAction="http://tempuri.org/CheckTaiKhoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditThuongHieu">
+      <soap:operation soapAction="http://tempuri.org/EditThuongHieu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteThuongHieu">
+      <soap:operation soapAction="http://tempuri.org/DeleteThuongHieu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThuongHieu">
+      <soap:operation soapAction="http://tempuri.org/GetThuongHieu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailThuongHieu">
+      <soap:operation soapAction="http://tempuri.org/DetailThuongHieu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMauMail">
+      <soap:operation soapAction="http://tempuri.org/EditMauMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMauMail">
+      <soap:operation soapAction="http://tempuri.org/DeleteMauMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMauMail">
+      <soap:operation soapAction="http://tempuri.org/GetMauMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailMauMail">
+      <soap:operation soapAction="http://tempuri.org/DetailMauMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditNhomKhachHang">
+      <soap:operation soapAction="http://tempuri.org/EditNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNhomKhachHang">
+      <soap:operation soapAction="http://tempuri.org/DeleteNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNhomKhachHang">
+      <soap:operation soapAction="http://tempuri.org/GetNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailNhomKhachHang">
+      <soap:operation soapAction="http://tempuri.org/DetailNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaNKHbyMaCD">
+      <soap:operation soapAction="http://tempuri.org/GetMaNKHbyMaCD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNhomKhachHangTheoChienDich">
+      <soap:operation soapAction="http://tempuri.org/GetNhomKhachHangTheoChienDich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditKhachHang">
+      <soap:operation soapAction="http://tempuri.org/EditKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKhachHang">
+      <soap:operation soapAction="http://tempuri.org/DeleteKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKhachHangByEmail">
+      <soap:operation soapAction="http://tempuri.org/DeleteKhachHangByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKhachHang">
+      <soap:operation soapAction="http://tempuri.org/GetKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKhachHangTheoChienDich">
+      <soap:operation soapAction="http://tempuri.org/GetKhachHangTheoChienDich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditChienDich">
+      <soap:operation soapAction="http://tempuri.org/EditChienDich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditChienDichKichHoat">
+      <soap:operation soapAction="http://tempuri.org/EditChienDichKichHoat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChienDich">
+      <soap:operation soapAction="http://tempuri.org/DeleteChienDich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChienDich">
+      <soap:operation soapAction="http://tempuri.org/GetChienDich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChienDichTheoNhomKhachHang">
+      <soap:operation soapAction="http://tempuri.org/GetChienDichTheoNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailChienDich">
+      <soap:operation soapAction="http://tempuri.org/DetailChienDich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://tempuri.org/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailTest">
+      <soap:operation soapAction="http://tempuri.org/SendMailTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTruongTron">
+      <soap:operation soapAction="http://tempuri.org/GetTruongTron" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APISoap12" type="tns:APISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Info">
+      <soap12:operation soapAction="http://tempuri.org/Info" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaiKhoan_SoDu">
+      <soap12:operation soapAction="http://tempuri.org/GetTaiKhoan_SoDu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTaiKhoan">
+      <soap12:operation soapAction="http://tempuri.org/CheckTaiKhoan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditThuongHieu">
+      <soap12:operation soapAction="http://tempuri.org/EditThuongHieu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteThuongHieu">
+      <soap12:operation soapAction="http://tempuri.org/DeleteThuongHieu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThuongHieu">
+      <soap12:operation soapAction="http://tempuri.org/GetThuongHieu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailThuongHieu">
+      <soap12:operation soapAction="http://tempuri.org/DetailThuongHieu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMauMail">
+      <soap12:operation soapAction="http://tempuri.org/EditMauMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMauMail">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMauMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMauMail">
+      <soap12:operation soapAction="http://tempuri.org/GetMauMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailMauMail">
+      <soap12:operation soapAction="http://tempuri.org/DetailMauMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditNhomKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/EditNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNhomKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/DeleteNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNhomKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/GetNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailNhomKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/DetailNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaNKHbyMaCD">
+      <soap12:operation soapAction="http://tempuri.org/GetMaNKHbyMaCD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNhomKhachHangTheoChienDich">
+      <soap12:operation soapAction="http://tempuri.org/GetNhomKhachHangTheoChienDich" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/EditKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/DeleteKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKhachHangByEmail">
+      <soap12:operation soapAction="http://tempuri.org/DeleteKhachHangByEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/GetKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKhachHangTheoChienDich">
+      <soap12:operation soapAction="http://tempuri.org/GetKhachHangTheoChienDich" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditChienDich">
+      <soap12:operation soapAction="http://tempuri.org/EditChienDich" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditChienDichKichHoat">
+      <soap12:operation soapAction="http://tempuri.org/EditChienDichKichHoat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChienDich">
+      <soap12:operation soapAction="http://tempuri.org/DeleteChienDich" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChienDich">
+      <soap12:operation soapAction="http://tempuri.org/GetChienDich" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChienDichTheoNhomKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/GetChienDichTheoNhomKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailChienDich">
+      <soap12:operation soapAction="http://tempuri.org/DetailChienDich" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap12:operation soapAction="http://tempuri.org/SendMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailTest">
+      <soap12:operation soapAction="http://tempuri.org/SendMailTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTruongTron">
+      <soap12:operation soapAction="http://tempuri.org/GetTruongTron" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="API">
+    <wsdl:port name="APISoap" binding="tns:APISoap">
+      <soap:address location="http://ems.dip.vn/api.asmx" />
+    </wsdl:port>
+    <wsdl:port name="APISoap12" binding="tns:APISoap12">
+      <soap12:address location="http://ems.dip.vn/api.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37D8B779-F73E-4E9D-8D28-814329348C9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DIPCRM.Need</RootNamespace>
+    <AssemblyName>DIPCRM.Need</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DIP.SwitchBoard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SwitchBoard\bin\Debug\DIP.SwitchBoard.dll</HintPath>
+    </Reference>
+    <Reference Include="DIPCRM.Contracts">
+      <HintPath>..\DIPCRM.Contracts\bin\Debug\DIPCRM.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="DIPCRM.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DIPCRM.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="DIPCRM.Customer, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DIPCRM.Customer.dll</HintPath>
+    </Reference>
+    <Reference Include="DIPCRM.Products">
+      <HintPath>..\DIPCRM\bin\Debug\DIPCRM.Products.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DIPCRM.Sales, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DIPCRM.Sales\bin\Debug\DIPCRM.Sales.dll</HintPath>
+    </Reference>
+    <Reference Include="DIPCRM.WorkSchedule">
+      <HintPath>..\DIPCRM.WorkSchedule\bin\Debug\DIPCRM.WorkSchedule.dll</HintPath>
+    </Reference>
+    <Reference Include="Document, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Document.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="LandSoftBuilding.Lease, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandSoftBuilding.Lease.dll</HintPath>
+    </Reference>
+    <Reference Include="LandSoftBuilding.Receivables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandSoftBuilding.Receivables.dll</HintPath>
+    </Reference>
+    <Reference Include="MyHtmlEditorControl, Version=2.0.6740.30549, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\MyHtmlEditorControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DanhMuc\frmCauHinhTiemNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmCauHinhTiemNang.Designer.cs">
+      <DependentUpon>frmCauHinhTiemNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmNhuCauThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmNhuCauThue.designer.cs">
+      <DependentUpon>frmNhuCauThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetail.designer.cs">
+      <DependentUpon>frmDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmHinhThucTiepXuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmHinhThucTiepXuc.designer.cs">
+      <DependentUpon>frmHinhThucTiepXuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ctlManager.designer.cs">
+      <DependentUpon>ctlManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddDoiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddDoiThu.designer.cs">
+      <DependentUpon>frmAddDoiThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOrganization.designer.cs">
+      <DependentUpon>frmAddOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProduct.designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmCapDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmCapDo.designer.cs">
+      <DependentUpon>frmCapDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmMucDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmMucDich.designer.cs">
+      <DependentUpon>frmMucDich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNgayQuaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNgayQuaHan.designer.cs">
+      <DependentUpon>frmNgayQuaHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelect.designer.cs">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmTrangThai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmTrangThai.designer.cs">
+      <DependentUpon>frmTrangThai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ctlBaoCaoDoanhThuDuKien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ctlBaoCaoDoanhThuDuKien.designer.cs">
+      <DependentUpon>ctlBaoCaoDoanhThuDuKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ctlReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ctlReport.designer.cs">
+      <DependentUpon>ctlReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ctlMucDoXuLyCongViec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ctlMucDoXuLyCongViec.designer.cs">
+      <DependentUpon>ctlMucDoXuLyCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmOption.Designer.cs">
+      <DependentUpon>frmOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ThongKeTinhTrang\ctlNhomKinhDoanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ThongKeTinhTrang\ctlNhomKinhDoanh.designer.cs">
+      <DependentUpon>ctlNhomKinhDoanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ThongKeTinhTrang\ctlNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ThongKeTinhTrang\ctlNhanVien.designer.cs">
+      <DependentUpon>ctlNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ThongKeTinhTrang\ctlChiNhanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ThongKeTinhTrang\ctlChiNhanh.designer.cs">
+      <DependentUpon>ctlChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ThongKeTinhTrang\ctlManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ThongKeTinhTrang\ctlManager.designer.cs">
+      <DependentUpon>ctlManager.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DanhMuc\frmCauHinhTiemNang.resx">
+      <DependentUpon>frmCauHinhTiemNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmNhuCauThue.resx">
+      <DependentUpon>frmNhuCauThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetail.resx">
+      <DependentUpon>frmDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmHinhThucTiepXuc.resx">
+      <DependentUpon>frmHinhThucTiepXuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlManager.resx">
+      <DependentUpon>ctlManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddDoiThu.resx">
+      <DependentUpon>frmAddDoiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOrganization.resx">
+      <DependentUpon>frmAddOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmCapDo.resx">
+      <DependentUpon>frmCapDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmMucDich.resx">
+      <DependentUpon>frmMucDich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNgayQuaHan.resx">
+      <DependentUpon>frmNgayQuaHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelect.resx">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmTrangThai.resx">
+      <DependentUpon>frmTrangThai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ctlBaoCaoDoanhThuDuKien.resx">
+      <DependentUpon>ctlBaoCaoDoanhThuDuKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ctlReport.resx">
+      <DependentUpon>ctlReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ctlMucDoXuLyCongViec.resx">
+      <DependentUpon>ctlMucDoXuLyCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmOption.resx">
+      <DependentUpon>frmOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ThongKeTinhTrang\ctlNhomKinhDoanh.resx">
+      <DependentUpon>ctlNhomKinhDoanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ThongKeTinhTrang\ctlNhanVien.resx">
+      <DependentUpon>ctlNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ThongKeTinhTrang\ctlChiNhanh.resx">
+      <DependentUpon>ctlChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ThongKeTinhTrang\ctlManager.resx">
+      <DependentUpon>ctlManager.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Building.WorkSchedule\Building.WorkSchedule.csproj">
+      <Project>{BFFF5E1B-A435-45B5-B668-5D0FCBFF1E20}</Project>
+      <Name>Building.WorkSchedule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIPCRM.PriceAlter\DIPCRM.PriceAlert.csproj">
+      <Project>{149d7c49-2d62-41c7-9f67-1af7c4fa6cef}</Project>
+      <Name>DIPCRM.PriceAlert</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LandsoftBuilding.Marketing\LandSoftBuilding.Marketing.csproj">
+      <Project>{5C11B008-1BD6-4123-ACD2-C4638745450D}</Project>
+      <Name>LandSoftBuilding.Marketing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{5ebb4b4d-49c2-4152-98db-577d2714ec49}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

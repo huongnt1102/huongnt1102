@@ -1,0 +1,106 @@
+﻿using System.Linq;
+
+namespace Building.PhanQuyenBieuDo.ControlSetting
+{
+    public partial class CtlPanel2 : DevExpress.XtraEditors.XtraUserControl
+    {
+        public int? SoBieuDo { get; set; }
+        public int? NhomCaiDatId { get; set; }
+        public bool? IsView { get; set; }
+
+        private delegate void DlgAddItemN();
+
+        public CtlPanel2()
+        {
+            InitializeComponent();
+        }
+
+        private void CtlPanel2_Load(object sender, System.EventArgs e)
+        {
+            var bw = new System.ComponentModel.BackgroundWorker();
+            bw.DoWork += bw_DoWork;
+            bw.RunWorkerAsync();
+        }
+
+        private async void bw_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            switch (IsView)
+            {
+                case false:
+                    await System.Threading.Tasks.Task.Run(() => LoadControlSetting1());
+                    await System.Threading.Tasks.Task.Run(() => LoadControlSetting2());
+
+                    break;
+                default:
+                    await System.Threading.Tasks.Task.Run(() => LoadControlView1());
+                    await System.Threading.Tasks.Task.Run(() => LoadControlView2());
+                    break;
+            }
+        }
+
+        private Library.pq_BieuDoMain_CaiDat GetCaiDat(int? sttManHinh)
+        {
+            var db = new Library.MasterDataContext();
+            return db.pq_BieuDoMain_CaiDats.FirstOrDefault(_ => _.NhomId == NhomCaiDatId & _.SttManHinh == sttManHinh);
+        }
+
+        private Library.pq_BieuDoMain_Control GetControl(int? controlId)
+        {
+            var db = new Library.MasterDataContext();
+            return db.pq_BieuDoMain_Controls.FirstOrDefault(_ => _.Id == controlId);
+        }
+
+        #region LoadControlSetting
+        private async void LoadControlSetting1()
+        {
+            var ctl = new Building.PhanQuyenBieuDo.ControlSetting.FrmChooseBieuDo { Dock = System.Windows.Forms.DockStyle.Fill, NhomCaiDatId = NhomCaiDatId, SttManHinh = 1 };
+            if (panelControl1.InvokeRequired)
+                await System.Threading.Tasks.Task.Run(() => { BeginInvoke(new DlgAddItemN(LoadControlSetting1)); });
+            else panelControl1.Controls.Add(ctl);
+        }
+
+        private async void LoadControlSetting2()
+        {
+            var ctl = new Building.PhanQuyenBieuDo.ControlSetting.FrmChooseBieuDo { Dock = System.Windows.Forms.DockStyle.Fill, NhomCaiDatId = NhomCaiDatId, SttManHinh = 2 };
+            if (panelControl2.InvokeRequired)
+                await System.Threading.Tasks.Task.Run(() => { BeginInvoke(new DlgAddItemN(LoadControlSetting2)); });
+            else panelControl2.Controls.Add(ctl);
+        }
+
+        #endregion
+
+        #region loadControlView
+
+        private async void LoadControlView1()
+        {
+            var caiDat = GetCaiDat(1);
+            if (caiDat == null) return;
+            var control = GetControl(caiDat.ControlId);
+            if (control == null) return;
+
+            var controlForm = (DevExpress.XtraEditors.XtraUserControl)Building.PhanQuyenBieuDo.Class.View.GetControlForm(control.ControlName, control.DllName); //control.ControlName, 
+            if (controlForm == null) return;
+            controlForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            if (panelControl1.InvokeRequired)
+                await System.Threading.Tasks.Task.Run(() => { BeginInvoke(new DlgAddItemN(LoadControlView1)); });
+            else panelControl1.Controls.Add(controlForm);
+        }
+
+        private async void LoadControlView2()
+        {
+            var caiDat = GetCaiDat(2);
+            if (caiDat == null) return;
+            var control = GetControl(caiDat.ControlId);
+            if (control == null) return;
+
+            var controlForm = (DevExpress.XtraEditors.XtraUserControl)Building.PhanQuyenBieuDo.Class.View.GetControlForm(control.ControlName, control.DllName); //control.ControlName, 
+            if (controlForm == null) return;
+            controlForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            if (panelControl2.InvokeRequired)
+                await System.Threading.Tasks.Task.Run(() => { BeginInvoke(new DlgAddItemN(LoadControlView2)); });
+            else panelControl2.Controls.Add(controlForm);
+        }
+
+        #endregion
+    }
+}

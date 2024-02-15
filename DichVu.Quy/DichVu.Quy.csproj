@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCD2CF0E-192C-49E9-99FE-67049C6E9C8C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DichVu.Quy</RootNamespace>
+    <AssemblyName>DichVu.Quy</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="LinqToExcel">
+      <HintPath>..\..\..\project_Building\DLL\LinqToExcel_x64_1.7.0\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\project_Building\DLL\LinqToExcel_x64_1.7.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion">
+      <HintPath>..\..\..\project_Building\DLL\LinqToExcel_x64_1.7.0\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq">
+      <HintPath>..\..\..\project_Building\DLL\LinqToExcel_x64_1.7.0\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces">
+      <HintPath>..\..\..\project_Building\DLL\LinqToExcel_x64_1.7.0\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmDSPhieuThuHuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSPhieuThuHuy.designer.cs">
+      <DependentUpon>frmDSPhieuThuHuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuThuHuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuThuHuy.designer.cs">
+      <DependentUpon>frmPhieuThuHuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuThuV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuThuV2.Designer.cs">
+      <DependentUpon>frmPhieuThuV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckList.Designer.cs">
+      <DependentUpon>frmCheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuChi.Designer.cs">
+      <DependentUpon>frmPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuThu.Designer.cs">
+      <DependentUpon>frmPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuThuDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuThuDetail.Designer.cs">
+      <DependentUpon>frmPhieuThuDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThucThuPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThucThuPhieuThu.Designer.cs">
+      <DependentUpon>frmThucThuPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVietPhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVietPhieuChi.Designer.cs">
+      <DependentUpon>frmVietPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVietPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVietPhieuThu.Designer.cs">
+      <DependentUpon>frmVietPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuChi\frmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuChi\frmEdit.designer.cs">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmDSPhieuThuHuy.resx">
+      <DependentUpon>frmDSPhieuThuHuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuThuHuy.resx">
+      <DependentUpon>frmPhieuThuHuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuThuV2.resx">
+      <DependentUpon>frmPhieuThuV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckList.resx">
+      <DependentUpon>frmCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuChi.resx">
+      <DependentUpon>frmPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuThu.resx">
+      <DependentUpon>frmPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuThuDetail.resx">
+      <DependentUpon>frmPhieuThuDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThucThuPhieuThu.resx">
+      <DependentUpon>frmThucThuPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVietPhieuChi.resx">
+      <DependentUpon>frmVietPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVietPhieuThu.resx">
+      <DependentUpon>frmVietPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuChi\frmEdit.resx">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DichVu.ChoThue\DichVu.ChoThue.csproj">
+      <Project>{B5B400FA-1416-4126-B226-39D3AABCB4FD}</Project>
+      <Name>DichVu.ChoThue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DichVu.Dien\DichVu.Dien.csproj">
+      <Project>{6F1DE8B7-8637-4F2C-B611-6FC24431F3C6}</Project>
+      <Name>DichVu.Dien</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DichVu.Gas\DichVu.Gas.csproj">
+      <Project>{E87517F8-076C-408B-BF2B-E1F2DE7A5CEC}</Project>
+      <Name>DichVu.Gas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DichVu.GiuXe\DichVu.GiuXe.csproj">
+      <Project>{47E01778-F4C9-4D73-BE42-BD17D9A1776B}</Project>
+      <Name>DichVu.GiuXe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DichVu.Nuoc\DichVu.Nuoc.csproj">
+      <Project>{7B7C685B-BB66-4062-82D3-D4642CEAD6AC}</Project>
+      <Name>DichVu.Nuoc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DichVu.PhiQuanLy\DichVu.PhiQuanLy.csproj">
+      <Project>{BDB1090E-F6CD-4FC1-ACEB-74B6FD00DAE3}</Project>
+      <Name>DichVu.PhiQuanLy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DichVu\DichVu.csproj">
+      <Project>{E6355D24-98D9-4428-87E3-4E01076D13EA}</Project>
+      <Name>DichVu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{5EBB4B4D-49C2-4152-98DB-577D2714EC49}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luu.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

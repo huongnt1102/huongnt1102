@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15E5D2E7-102D-4AAF-A0AD-DDA3A5FC49AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Building.SMS</RootNamespace>
+    <AssemblyName>Building.SMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Category\FrmBrandName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\FrmBrandName.Designer.cs">
+      <DependentUpon>FrmBrandName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\FrmCaiDatNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\FrmCaiDatNhanVien.Designer.cs">
+      <DependentUpon>FrmCaiDatNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Common.cs" />
+    <Compile Include="Class\CongNo.cs" />
+    <Compile Include="Class\DichVuYeuCau.cs" />
+    <Compile Include="Class\KhachHang.cs" />
+    <Compile Include="frmDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesign.designer.cs">
+      <DependentUpon>frmDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEdit.designer.cs">
+      <DependentUpon>FrmEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmField.designer.cs">
+      <DependentUpon>FrmField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPreview.designer.cs">
+      <DependentUpon>FrmPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuilding.Designer.cs">
+      <DependentUpon>FrmBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTemplate.Designer.cs">
+      <DependentUpon>FrmTemplate.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZaloDotNetSDK, Version=1.1.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BUILDING_HIMLAM2020\dll\ZaloDotNetSDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Category\FrmBrandName.resx">
+      <DependentUpon>FrmBrandName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\FrmCaiDatNhanVien.resx">
+      <DependentUpon>FrmCaiDatNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuilding.resx">
+      <DependentUpon>FrmBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDesign.resx">
+      <DependentUpon>frmDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEdit.resx">
+      <DependentUpon>FrmEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmField.resx">
+      <DependentUpon>FrmField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPreview.resx">
+      <DependentUpon>FrmPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTemplate.resx">
+      <DependentUpon>FrmTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{5ebb4b4d-49c2-4152-98db-577d2714ec49}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

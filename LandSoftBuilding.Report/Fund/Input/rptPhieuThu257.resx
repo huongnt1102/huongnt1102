@@ -1,0 +1,1087 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrTable13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11pt, style=Bold</value>
+  </data>
+  <data name="xrTable13.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v18.2" name="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrTable13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>108.62487, 2099.9646</value>
+  </data>
+  <data name="cTenCty3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="cTenCty3.Text" xml:space="preserve">
+    <value>CÔNG TY CỔ PHẦN GOLDEN GAIN VIỆT NAM</value>
+  </data>
+  <data name="cDiaChiCty3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="cDiaChiCty3.Text" xml:space="preserve">
+    <value>Khu N03, KĐT Đông Nam Trần Duy Hưng, Đ.Hoàng Minh Giám</value>
+  </data>
+  <data name="xrTable13.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>371.1666, 42.36112</value>
+  </data>
+  <assembly alias="DevExpress.Data.v18.2" name="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrTable13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTable15.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 2205.87231</value>
+  </data>
+  <data name="xrTableCell106.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell106.Text" xml:space="preserve">
+    <value>PHIẾU THU</value>
+  </data>
+  <data name="xrTableRow56.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell107.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell107.Text" xml:space="preserve">
+    <value>(Liên 3)</value>
+  </data>
+  <data name="xrTableCell107.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="cNgayPT3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="cNgayPT3.Text" xml:space="preserve">
+    <value>Ngày tháng năm</value>
+  </data>
+  <data name="xrTable15.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 76.07806</value>
+  </data>
+  <data name="xrTable15.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTable18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 2592.62866</value>
+  </data>
+  <data name="cDaNhanDuTien3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="cDaNhanDuTien3.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cDaNhanDuTien3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable18.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 25</value>
+  </data>
+  <data name="xrTable16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTable16.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>564.4998, 2152.32568</value>
+  </data>
+  <data name="xrTableCell109.Text" xml:space="preserve">
+    <value>Nợ : 1111</value>
+  </data>
+  <data name="xrTableCell110.Text" xml:space="preserve">
+    <value>Có : 131</value>
+  </data>
+  <data name="cSoPT3.Text" xml:space="preserve">
+    <value>Số PT :</value>
+  </data>
+  <data name="xrTable16.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>162.5, 53.54679</value>
+  </data>
+  <data name="xrTable16.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrPictureBox2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>3.74979973, 2096.49219</value>
+  </data>
+  <data name="xrPictureBox2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>104.8751, 66.25001</value>
+  </data>
+  <data name="xrTable14.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 2296.15771</value>
+  </data>
+  <data name="xrTableCell39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell39.Text" xml:space="preserve">
+    <value>Họ và tên người nộp tiền:</value>
+  </data>
+  <data name="cNguoiNop3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell43.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell43.Text" xml:space="preserve">
+    <value>Địa chỉ căn hộ:</value>
+  </data>
+  <data name="cDiaChi3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell47.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell47.Text" xml:space="preserve">
+    <value>Lý do nộp:</value>
+  </data>
+  <data name="cLyDo3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell77.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell77.Text" xml:space="preserve">
+    <value>Số tiền:</value>
+  </data>
+  <data name="cSoTien3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold, Italic</value>
+  </data>
+  <data name="xrTableCell79.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell79.Text" xml:space="preserve">
+    <value>Viết bằng chữ</value>
+  </data>
+  <data name="cSoTienBC3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell81.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell81.Text" xml:space="preserve">
+    <value>Kèm theo:</value>
+  </data>
+  <data name="xrTableCell82.Text" xml:space="preserve">
+    <value>................................................................................</value>
+  </data>
+  <data name="xrTableCell83.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell83.Text" xml:space="preserve">
+    <value>Chứng từ gốc:</value>
+  </data>
+  <data name="xrTableCell84.Text" xml:space="preserve">
+    <value>......................................................</value>
+  </data>
+  <data name="xrTableCell86.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell86.Text" xml:space="preserve">
+    <value>Giám đốc</value>
+  </data>
+  <data name="xrTableCell86.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell87.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell87.Text" xml:space="preserve">
+    <value>Kế toán trưởng</value>
+  </data>
+  <data name="xrTableCell87.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell88.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell88.Text" xml:space="preserve">
+    <value>Người nộp tiền</value>
+  </data>
+  <data name="xrTableCell88.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell89.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell89.Text" xml:space="preserve">
+    <value>Người lập phiếu</value>
+  </data>
+  <data name="xrTableCell89.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell90.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell90.Text" xml:space="preserve">
+    <value>Thủ qũy</value>
+  </data>
+  <data name="xrTableCell90.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell91.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell91.Text" xml:space="preserve">
+    <value>(Ký, Họ tên, đóng dấu)</value>
+  </data>
+  <data name="xrTableCell91.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell92.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell92.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell92.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell93.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell93.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell93.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell94.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell94.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell94.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell95.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell95.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell95.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell101.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell102.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell103.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell105.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTable14.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 267.303833</value>
+  </data>
+  <data name="xrTable14.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTable17.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>479.7915, 2099.9646</value>
+  </data>
+  <data name="xrTableCell112.Text" xml:space="preserve">
+    <value>Mẫu số 01-TT
+(Ban hành theo thông tư 200/2014/TT-BTC
+ngày 22/12/2014 của Bộ trưởng BTC)
+</value>
+  </data>
+  <data name="xrTableRow62.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTable17.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>247.2083, 53.12502</value>
+  </data>
+  <data name="xrTable17.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 1541.20422</value>
+  </data>
+  <data name="cDaNhanDuTien2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="cDaNhanDuTien2.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cDaNhanDuTien2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 25</value>
+  </data>
+  <data name="xrTable11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTable11.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>479.791656, 1055.83191</value>
+  </data>
+  <data name="xrTableCell73.Text" xml:space="preserve">
+    <value>Mẫu số 01-TT
+(Ban hành theo thông tư 200/2014/TT-BTC
+ngày 22/12/2014 của Bộ trưởng BTC)
+</value>
+  </data>
+  <data name="xrTableRow39.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTable11.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>247.2083, 53.12502</value>
+  </data>
+  <data name="xrTable11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTable12.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>564.5, 1108.19287</value>
+  </data>
+  <data name="xrTableCell74.Text" xml:space="preserve">
+    <value>Nợ : 1111</value>
+  </data>
+  <data name="xrTableCell75.Text" xml:space="preserve">
+    <value>Có : 131</value>
+  </data>
+  <data name="cSoPT2.Text" xml:space="preserve">
+    <value>Số PT :</value>
+  </data>
+  <data name="xrTable12.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>162.5, 53.54679</value>
+  </data>
+  <data name="xrTable12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTable9.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 1161.73962</value>
+  </data>
+  <data name="xrTableCell29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell29.Text" xml:space="preserve">
+    <value>PHIẾU THU</value>
+  </data>
+  <data name="xrTableRow25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell36.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell36.Text" xml:space="preserve">
+    <value>(Liên 2)</value>
+  </data>
+  <data name="xrTableCell36.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="cNgayPT2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="cNgayPT2.Text" xml:space="preserve">
+    <value>Ngày tháng năm</value>
+  </data>
+  <data name="xrTable9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 76.07806</value>
+  </data>
+  <data name="xrTable9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTable10.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 1252.02527</value>
+  </data>
+  <data name="xrTableCell38.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell38.Text" xml:space="preserve">
+    <value>Họ và tên người nộp tiền:</value>
+  </data>
+  <data name="cNguoiNop2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell40.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell40.Text" xml:space="preserve">
+    <value>Địa chỉ căn hộ:</value>
+  </data>
+  <data name="cDiaChi2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell42.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell42.Text" xml:space="preserve">
+    <value>Lý do nộp:</value>
+  </data>
+  <data name="cLyDo2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell44.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell44.Text" xml:space="preserve">
+    <value>Số tiền:</value>
+  </data>
+  <data name="cSoTien2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold, Italic</value>
+  </data>
+  <data name="xrTableCell46.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell46.Text" xml:space="preserve">
+    <value>Viết bằng chữ</value>
+  </data>
+  <data name="cSoTienBC2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell48.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell48.Text" xml:space="preserve">
+    <value>Kèm theo:</value>
+  </data>
+  <data name="xrTableCell49.Text" xml:space="preserve">
+    <value>................................................................................</value>
+  </data>
+  <data name="xrTableCell50.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell50.Text" xml:space="preserve">
+    <value>Chứng từ gốc:</value>
+  </data>
+  <data name="xrTableCell51.Text" xml:space="preserve">
+    <value>......................................................</value>
+  </data>
+  <data name="xrTableCell53.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell53.Text" xml:space="preserve">
+    <value>Giám đốc</value>
+  </data>
+  <data name="xrTableCell53.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell54.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell54.Text" xml:space="preserve">
+    <value>Kế toán trưởng</value>
+  </data>
+  <data name="xrTableCell54.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell55.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell55.Text" xml:space="preserve">
+    <value>Người nộp tiền</value>
+  </data>
+  <data name="xrTableCell55.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell56.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell56.Text" xml:space="preserve">
+    <value>Người lập phiếu</value>
+  </data>
+  <data name="xrTableCell56.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell57.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell57.Text" xml:space="preserve">
+    <value>Thủ qũy</value>
+  </data>
+  <data name="xrTableCell57.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell58.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell58.Text" xml:space="preserve">
+    <value>(Ký, Họ tên, đóng dấu)</value>
+  </data>
+  <data name="xrTableCell58.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell59.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell59.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell59.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell60.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell60.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell60.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell61.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell61.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell61.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell62.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell62.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell62.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell68.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell69.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell70.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell72.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTable10.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 267.303833</value>
+  </data>
+  <data name="xrTable10.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>3.74995875, 1052.3595</value>
+  </data>
+  <data name="xrPictureBox1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>104.8751, 66.25001</value>
+  </data>
+  <data name="xrTable8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11pt, style=Bold</value>
+  </data>
+  <data name="xrTable8.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>108.625038, 1055.83191</value>
+  </data>
+  <data name="cTenCty2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="cTenCty2.Text" xml:space="preserve">
+    <value>CÔNG TY CỔ PHẦN GOLDEN GAIN VIỆT NAM</value>
+  </data>
+  <data name="cDiaChiCty2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="cDiaChiCty2.Text" xml:space="preserve">
+    <value>Khu N03, KĐT Đông Nam Trần Duy Hưng, Đ.Hoàng Minh Giám</value>
+  </data>
+  <data name="xrTable8.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>371.1666, 42.36112</value>
+  </data>
+  <data name="xrTable8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTable7.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>564.5, 55.83335</value>
+  </data>
+  <data name="xrTableCell7.Text" xml:space="preserve">
+    <value>Nợ : 1111</value>
+  </data>
+  <data name="xrTableCell19.Text" xml:space="preserve">
+    <value>Có : 131</value>
+  </data>
+  <data name="cSoPT.Text" xml:space="preserve">
+    <value>Số PT :</value>
+  </data>
+  <data name="xrTable7.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>162.5, 53.54679</value>
+  </data>
+  <data name="xrTable7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTable4.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>479.7917, 2.70834</value>
+  </data>
+  <data name="xrTableCell16.Text" xml:space="preserve">
+    <value>Mẫu số 01-TT
+(Ban hành theo thông tư 200/2014/TT-BTC
+ngày 22/12/2014 của Bộ trưởng BTC)
+</value>
+  </data>
+  <data name="xrTableRow20.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTable4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>247.2083, 53.12502</value>
+  </data>
+  <data name="xrTable4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable3.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 199.6656</value>
+  </data>
+  <data name="xrTableCell2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell2.Text" xml:space="preserve">
+    <value>Họ và tên người nộp tiền:</value>
+  </data>
+  <data name="cNguoiNop.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell5.Text" xml:space="preserve">
+    <value>Địa chỉ căn hộ:</value>
+  </data>
+  <data name="cDiaChi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell8.Text" xml:space="preserve">
+    <value>Lý do nộp:</value>
+  </data>
+  <data name="cLyDo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTableCell11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell11.Text" xml:space="preserve">
+    <value>Số tiền:</value>
+  </data>
+  <data name="cSoTien1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold, Italic</value>
+  </data>
+  <data name="xrTableCell35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell35.Text" xml:space="preserve">
+    <value>Viết bằng chữ</value>
+  </data>
+  <data name="cSoTienBC1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell17.Text" xml:space="preserve">
+    <value>Kèm theo:</value>
+  </data>
+  <data name="cKemTheo.Text" xml:space="preserve">
+    <value>................................................................................</value>
+  </data>
+  <data name="xrTableCell30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell30.Text" xml:space="preserve">
+    <value>Chứng từ gốc:</value>
+  </data>
+  <data name="cChungTuGoc.Text" xml:space="preserve">
+    <value>......................................................</value>
+  </data>
+  <data name="xrTableCell23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell23.Text" xml:space="preserve">
+    <value>Giám đốc</value>
+  </data>
+  <data name="xrTableCell23.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell24.Text" xml:space="preserve">
+    <value>Kế toán trưởng</value>
+  </data>
+  <data name="xrTableCell24.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell32.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell32.Text" xml:space="preserve">
+    <value>Người nộp tiền</value>
+  </data>
+  <data name="xrTableCell32.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell15.Text" xml:space="preserve">
+    <value>Người lập phiếu</value>
+  </data>
+  <data name="xrTableCell15.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell25.Text" xml:space="preserve">
+    <value>Thủ qũy</value>
+  </data>
+  <data name="xrTableCell25.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell3.Text" xml:space="preserve">
+    <value>(Ký, Họ tên, đóng dấu)</value>
+  </data>
+  <data name="xrTableCell3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell4.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell6.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell31.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell31.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell31.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8pt, style=Italic</value>
+  </data>
+  <data name="xrTableCell9.Text" xml:space="preserve">
+    <value>(Ký, Họ tên)</value>
+  </data>
+  <data name="xrTableCell9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="cNguoiLap.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell20.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell21.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell27.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTable3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 267.3038</value>
+  </data>
+  <data name="xrTable3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="xrTable2.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 109.3801</value>
+  </data>
+  <data name="xrTableCell1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell1.Text" xml:space="preserve">
+    <value>PHIẾU THU</value>
+  </data>
+  <data name="xrTableRow4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="cLien.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="cLien.Text" xml:space="preserve">
+    <value>(Liên 1)</value>
+  </data>
+  <data name="cLien.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="cNgayPT.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt, style=Italic</value>
+  </data>
+  <data name="cNgayPT.Text" xml:space="preserve">
+    <value>Ngày tháng năm</value>
+  </data>
+  <data name="xrTable2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 76.07806</value>
+  </data>
+  <data name="xrTable2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="picLogo.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>3.749998, 0</value>
+  </data>
+  <data name="picLogo.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>104.8751, 66.25001</value>
+  </data>
+  <data name="xrTable1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11pt, style=Bold</value>
+  </data>
+  <data name="xrTable1.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>108.6251, 3.472233</value>
+  </data>
+  <data name="cTenTN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="cTenTN.Text" xml:space="preserve">
+    <value>CÔNG TY CỔ PHẦN GOLDEN GAIN VIỆT NAM</value>
+  </data>
+  <data name="cDiaChiTN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="cDiaChiTN.Text" xml:space="preserve">
+    <value>Khu N03, KĐT Đông Nam Trần Duy Hưng, Đ.Hoàng Minh Giám</value>
+  </data>
+  <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>371.1666, 42.36112</value>
+  </data>
+  <data name="xrTable1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v18.2">
+    <value>0, 490.927765</value>
+  </data>
+  <data name="cDaNhanDuTien.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="cDaNhanDuTien.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="cDaNhanDuTien.Text" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="cDaNhanDuTien.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrTable5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>727, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Detail.HeightF" type="System.Single, mscorlib">
+    <value>2698.49585</value>
+  </data>
+  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="TopMargin.HeightF" type="System.Single, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="BottomMargin.HeightF" type="System.Single, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="BottomMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v18.2">
+    <value>TopLeft</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt</value>
+  </data>
+</root>

@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DC58AF2-326C-45B9-BF15-4ABB6BDA4CC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAP</RootNamespace>
+    <AssemblyName>SAP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Building.SystemLog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.SystemLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.38.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Library.Class, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.Class.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.7.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Header.cs" />
+    <Compile Include="Class\SapEuroLog.cs" />
+    <Compile Include="Class\SapInLog.cs" />
+    <Compile Include="Class\ZIAR008In_Content.cs" />
+    <Compile Include="Class\ZIAR008In_DetailItem.cs" />
+    <Compile Include="Class\ZIAR008List.cs" />
+    <Compile Include="Class\Document.cs" />
+    <Compile Include="Class\Row.cs" />
+    <Compile Include="Class\ZIAR009In_Content.cs" />
+    <Compile Include="Class\ZIAR009In_DetailItem.cs" />
+    <Compile Include="Class\ZIAR009List.cs" />
+    <Compile Include="Class\ZIMD005Data.cs" />
+    <Compile Include="Class\ZIMD007Data.cs" />
+    <Compile Include="Class\ZIMD009Data.cs" />
+    <Compile Include="Class\LinkAPIAddress.cs" />
+    <Compile Include="Class\Out.cs" />
+    <Compile Include="Class\Result.cs" />
+    <Compile Include="Class\System.cs" />
+    <Compile Include="Class\ZIMD005In.cs" />
+    <Compile Include="Class\ZIMD005Out.cs" />
+    <Compile Include="Class\ZIMD007In.cs" />
+    <Compile Include="Class\In.cs" />
+    <Compile Include="Class\ZIMD009In.cs" />
+    <Compile Include="Class\ZIMD009Out.cs" />
+    <Compile Include="Class\ZIMD009Update.cs" />
+    <Compile Include="frmLichSuDongBoLSToSap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLichSuDongBoLSToSap.designer.cs">
+      <DependentUpon>frmLichSuDongBoLSToSap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmMappingNhomMatBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmMappingNhomMatBang.designer.cs">
+      <DependentUpon>frmMappingNhomMatBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmMappingPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmMappingPhieuThu.designer.cs">
+      <DependentUpon>frmMappingPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmMappingDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmMappingDoanhThu.designer.cs">
+      <DependentUpon>frmMappingDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmCuDanCDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmCuDanCDT.designer.cs">
+      <DependentUpon>frmCuDanCDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmCompanyCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmCompanyCode.designer.cs">
+      <DependentUpon>frmCompanyCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoanhThu.designer.cs">
+      <DependentUpon>frmDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLichSuDongBoTuWebApi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLichSuDongBoTuWebApi.designer.cs">
+      <DependentUpon>frmLichSuDongBoTuWebApi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManHinhTrungGianPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManHinhTrungGianPhieuThu.designer.cs">
+      <DependentUpon>frmManHinhTrungGianPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManHinhTrungGianHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManHinhTrungGianHoaDon.designer.cs">
+      <DependentUpon>frmManHinhTrungGianHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManager.designer.cs">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmViewJson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmViewJson.Designer.cs">
+      <DependentUpon>frmViewJson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmView.Designer.cs">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funct\SyncPhieuThu.cs" />
+    <Compile Include="Funct\RequestApi.cs" />
+    <Compile Include="Funct\SyncCus.cs" />
+    <Compile Include="Funct\SyncHoaDon.cs" />
+    <Compile Include="Import\frmMappingDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import\frmMappingDoanhThu.Designer.cs">
+      <DependentUpon>frmMappingDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import\frmCompanyCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import\frmCompanyCode.Designer.cs">
+      <DependentUpon>frmCompanyCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmLichSuDongBoLSToSap.resx">
+      <DependentUpon>frmLichSuDongBoLSToSap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmMappingNhomMatBang.resx">
+      <DependentUpon>frmMappingNhomMatBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmMappingPhieuThu.resx">
+      <DependentUpon>frmMappingPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmMappingDoanhThu.resx">
+      <DependentUpon>frmMappingDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmCuDanCDT.resx">
+      <DependentUpon>frmCuDanCDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmCompanyCode.resx">
+      <DependentUpon>frmCompanyCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoanhThu.resx">
+      <DependentUpon>frmDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLichSuDongBoTuWebApi.resx">
+      <DependentUpon>frmLichSuDongBoTuWebApi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManHinhTrungGianPhieuThu.resx">
+      <DependentUpon>frmManHinhTrungGianPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManHinhTrungGianHoaDon.resx">
+      <DependentUpon>frmManHinhTrungGianHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManager.resx">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmViewJson.resx">
+      <DependentUpon>frmViewJson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmView.resx">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import\frmMappingDoanhThu.resx">
+      <DependentUpon>frmMappingDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import\frmCompanyCode.resx">
+      <DependentUpon>frmCompanyCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

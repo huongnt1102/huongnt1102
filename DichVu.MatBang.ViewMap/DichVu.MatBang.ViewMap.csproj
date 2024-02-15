@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A018B3F9-7EC2-4040-B2C6-D94864E409E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DichVu.MatBang.ViewMap</RootNamespace>
+    <AssemblyName>DichVu.MatBang.ViewMap</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Data.cs" />
+    <Compile Include="Data\FrmShowItemDoubleCLickData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\FrmShowItemDoubleCLickData.Designer.cs">
+      <DependentUpon>FrmShowItemDoubleCLickData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FrmViewData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\FrmViewData.Designer.cs">
+      <DependentUpon>FrmViewData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewMap5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewMap5.Designer.cs">
+      <DependentUpon>FrmViewMap5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMap\FrmMapTiengViet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMap\FrmMapTiengViet.Designer.cs">
+      <DependentUpon>FrmMapTiengViet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap.Designer.cs">
+      <DependentUpon>FrmViewMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMap\frmViewMap22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMap\frmViewMap22.Designer.cs">
+      <DependentUpon>frmViewMap22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMap\frmViewMap2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMap\frmViewMap2.Designer.cs">
+      <DependentUpon>frmViewMap2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap3.Designer.cs">
+      <DependentUpon>FrmViewMap3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap33.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap33.Designer.cs">
+      <DependentUpon>FrmViewMap33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap4.Designer.cs">
+      <DependentUpon>FrmViewMap4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMap\FrmViewMap6.Designer.cs">
+      <DependentUpon>FrmViewMap6.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\FrmShowItemDoubleCLickData.resx">
+      <DependentUpon>FrmShowItemDoubleCLickData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\FrmViewData.resx">
+      <DependentUpon>FrmViewData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewMap5.resx">
+      <DependentUpon>FrmViewMap5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMap\FrmMapTiengViet.resx">
+      <DependentUpon>FrmMapTiengViet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMap\FrmViewMap.resx">
+      <DependentUpon>FrmViewMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMap\frmViewMap22.resx">
+      <DependentUpon>frmViewMap22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMap\frmViewMap2.resx">
+      <DependentUpon>frmViewMap2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMap\FrmViewMap3.resx">
+      <DependentUpon>FrmViewMap3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMap\FrmViewMap33.resx">
+      <DependentUpon>FrmViewMap33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMap\FrmViewMap4.resx">
+      <DependentUpon>FrmViewMap4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMap\FrmViewMap6.resx">
+      <DependentUpon>FrmViewMap6.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FTP\FTP.csproj">
+      <Project>{8dba34fe-6a99-43db-88aa-caab77af06d1}</Project>
+      <Name>FTP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{5ebb4b4d-49c2-4152-98db-577d2714ec49}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

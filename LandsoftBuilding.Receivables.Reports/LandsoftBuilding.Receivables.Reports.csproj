@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45536BC1-1A15-4C04-B642-7AE7E1E2F767}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LandsoftBuilding.Receivables.Reports</RootNamespace>
+    <AssemblyName>LandsoftBuilding.Receivables.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Library.Class, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.Class.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class\BaoCaoTienCocModel.cs" />
+    <Compile Include="Class\ChiTietCongNoTongHopModel.cs" />
+    <Compile Include="Class\ChiTietThueMatBangModel.cs" />
+    <Compile Include="CongNoTongHop\frmBCThongKeDonGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmBCThongKeDonGia.Designer.cs">
+      <DependentUpon>frmBCThongKeDonGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmChiTietCongNo_Layout1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmChiTietCongNo_Layout1.designer.cs">
+      <DependentUpon>frmChiTietCongNo_Layout1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmChiTietCongNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmChiTietCongNo.designer.cs">
+      <DependentUpon>frmChiTietCongNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmChiTietCongNo_Layout2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmChiTietCongNo_Layout2.designer.cs">
+      <DependentUpon>frmChiTietCongNo_Layout2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmChiTietThueMatBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmChiTietThueMatBang.Designer.cs">
+      <DependentUpon>frmChiTietThueMatBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmCongNoThueMatBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmCongNoThueMatBang.Designer.cs">
+      <DependentUpon>frmCongNoThueMatBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmTongHopCongNoThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoTongHop\frmTongHopCongNoThang.Designer.cs">
+      <DependentUpon>frmTongHopCongNoThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeHoachThu\frmKeHoachThuNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeHoachThu\frmKeHoachThuNam.designer.cs">
+      <DependentUpon>frmKeHoachThuNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TienCoc\frmTienCoc_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TienCoc\frmTienCoc_Form1.Designer.cs">
+      <DependentUpon>frmTienCoc_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TienCoc\frmTienCoc_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TienCoc\frmTienCoc_Form2.Designer.cs">
+      <DependentUpon>frmTienCoc_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TyLeLapDay\frmCanHo_Layout2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TyLeLapDay\frmCanHo_Layout2.Designer.cs">
+      <DependentUpon>frmCanHo_Layout2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TyLeLapDay\frmChoThue_Layout1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TyLeLapDay\frmChoThue_Layout1.Designer.cs">
+      <DependentUpon>frmChoThue_Layout1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TyLeLapDay\frmChoThue_Layout2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TyLeLapDay\frmChoThue_Layout2.Designer.cs">
+      <DependentUpon>frmChoThue_Layout2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TyLeLapDay\frmThongTinChung_Layout2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TyLeLapDay\frmThongTinChung_Layout2.designer.cs">
+      <DependentUpon>frmThongTinChung_Layout2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CongNoTongHop\frmBCThongKeDonGia.resx">
+      <DependentUpon>frmBCThongKeDonGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoTongHop\frmChiTietCongNo_Layout1.resx">
+      <DependentUpon>frmChiTietCongNo_Layout1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoTongHop\frmChiTietCongNo.resx">
+      <DependentUpon>frmChiTietCongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoTongHop\frmChiTietCongNo_Layout2.resx">
+      <DependentUpon>frmChiTietCongNo_Layout2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoTongHop\frmChiTietThueMatBang.resx">
+      <DependentUpon>frmChiTietThueMatBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoTongHop\frmCongNoThueMatBang.resx">
+      <DependentUpon>frmCongNoThueMatBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoTongHop\frmTongHopCongNoThang.resx">
+      <DependentUpon>frmTongHopCongNoThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeHoachThu\frmKeHoachThuNam.resx">
+      <DependentUpon>frmKeHoachThuNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="TienCoc\frmTienCoc_Form1.resx">
+      <DependentUpon>frmTienCoc_Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TienCoc\frmTienCoc_Form2.resx">
+      <DependentUpon>frmTienCoc_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TyLeLapDay\frmCanHo_Layout2.resx">
+      <DependentUpon>frmCanHo_Layout2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TyLeLapDay\frmChoThue_Layout1.resx">
+      <DependentUpon>frmChoThue_Layout1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TyLeLapDay\frmChoThue_Layout2.resx">
+      <DependentUpon>frmChoThue_Layout2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TyLeLapDay\frmThongTinChung_Layout2.resx">
+      <DependentUpon>frmThongTinChung_Layout2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

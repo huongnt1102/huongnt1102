@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{102CCC8B-D6C1-4FCC-B77E-0380E9E5BDCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Building.PhanQuyenBieuDo</RootNamespace>
+    <AssemblyName>Building.PhanQuyenBieuDo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\View.cs" />
+    <Compile Include="ControlSetting\CtlPanel1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel1.Designer.cs">
+      <DependentUpon>CtlPanel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel7.Designer.cs">
+      <DependentUpon>CtlPanel7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel6.Designer.cs">
+      <DependentUpon>CtlPanel6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel2.Designer.cs">
+      <DependentUpon>CtlPanel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel3.Designer.cs">
+      <DependentUpon>CtlPanel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel4.Designer.cs">
+      <DependentUpon>CtlPanel4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\CtlPanel5.Designer.cs">
+      <DependentUpon>CtlPanel5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\FrmChooseBieuDo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\FrmChooseBieuDo.Designer.cs">
+      <DependentUpon>FrmChooseBieuDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\FrmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\FrmView.Designer.cs">
+      <DependentUpon>FrmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSetting\FrmViewUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSetting\FrmViewUserControl.Designer.cs">
+      <DependentUpon>FrmViewUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBieuDoSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBieuDoSetting.Designer.cs">
+      <DependentUpon>FrmBieuDoSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group\FrmNhanVien.Designer.cs">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group\FrmNhomBieuDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group\FrmNhomBieuDo.Designer.cs">
+      <DependentUpon>FrmNhomBieuDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group\FrmNhomCaiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group\FrmNhomCaiDat.Designer.cs">
+      <DependentUpon>FrmNhomCaiDat.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ControlSetting\CtlPanel1.resx">
+      <DependentUpon>CtlPanel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\CtlPanel7.resx">
+      <DependentUpon>CtlPanel7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\CtlPanel6.resx">
+      <DependentUpon>CtlPanel6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\CtlPanel2.resx">
+      <DependentUpon>CtlPanel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\CtlPanel3.resx">
+      <DependentUpon>CtlPanel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\CtlPanel4.resx">
+      <DependentUpon>CtlPanel4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\CtlPanel5.resx">
+      <DependentUpon>CtlPanel5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\FrmChooseBieuDo.resx">
+      <DependentUpon>FrmChooseBieuDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\FrmView.resx">
+      <DependentUpon>FrmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSetting\FrmViewUserControl.resx">
+      <DependentUpon>FrmViewUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBieuDoSetting.resx">
+      <DependentUpon>FrmBieuDoSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group\FrmNhanVien.resx">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group\FrmNhomBieuDo.resx">
+      <DependentUpon>FrmNhomBieuDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group\FrmNhomCaiDat.resx">
+      <DependentUpon>FrmNhomCaiDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{5ebb4b4d-49c2-4152-98db-577d2714ec49}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

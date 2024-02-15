@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C11B008-1BD6-4123-ACD2-C4638745450D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LandSoftBuilding.Marketing</RootNamespace>
+    <AssemblyName>LandSoftBuilding.Marketing</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FTP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\FTP.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.dll</HintPath>
+    </Reference>
+    <Reference Include="MyHtmlEditorControl, Version=2.0.5742.19099, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\MyHtmlEditorControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mail\Config\frmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\Config\frmEdit.designer.cs">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Config\frmManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\Config\frmManager.Designer.cs">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Config\LichSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\Config\LichSu.designer.cs">
+      <DependentUpon>LichSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\frmMailStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\frmMailStaff.Designer.cs">
+      <DependentUpon>frmMailStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Templates\frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\Templates\frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\frmFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\frmFields.designer.cs">
+      <DependentUpon>frmFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\History\ctlMailHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mail\History\ctlMailHistory.Designer.cs">
+      <DependentUpon>ctlMailHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\History\frmSendMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\History\frmSendMail.Designer.cs">
+      <DependentUpon>frmSendMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\MailClient.cs" />
+    <Compile Include="Mail\Templates\frmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\Templates\frmEdit.designer.cs">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Templates\frmManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\Templates\frmManager.Designer.cs">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMS\frmFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMS\frmFields.designer.cs">
+      <DependentUpon>frmFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\frmHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMS\frmHistory.designer.cs">
+      <DependentUpon>frmHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\frmMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMS\frmMoney.designer.cs">
+      <DependentUpon>frmMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\frmTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMS\frmTemplates.designer.cs">
+      <DependentUpon>frmTemplates.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mail\Config\frmEdit.resx">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\Config\frmManager.resx">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\Config\LichSu.resx">
+      <DependentUpon>LichSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\frmMailStaff.resx">
+      <DependentUpon>frmMailStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\Templates\frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\frmFields.resx">
+      <DependentUpon>frmFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\History\ctlMailHistory.resx">
+      <DependentUpon>ctlMailHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\History\frmSendMail.resx">
+      <DependentUpon>frmSendMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\Templates\frmEdit.resx">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\Templates\frmManager.resx">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SMS\frmFields.resx">
+      <DependentUpon>frmFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMS\frmHistory.resx">
+      <DependentUpon>frmHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMS\frmMoney.resx">
+      <DependentUpon>frmMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMS\frmTemplates.resx">
+      <DependentUpon>frmTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

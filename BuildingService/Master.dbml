@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="building_db" Class="MasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=112.213.94.77;Initial Catalog=building_db;Persist Security Info=True;User ID=Building_login" SettingsObjectName="BuildingService.Properties.Settings" SettingsPropertyName="building_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tnKhachHang" Member="tnKhachHangs">
+    <Type Name="tnKhachHang">
+      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HoKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenKH" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DienThoaiKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmailKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DCTT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DCLL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NgayCap" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="NoiCap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsCaNhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CtyTen" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CtyTenVT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtyDiaChi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CtyFax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtyDienThoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtySoDKKD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtyNgayDKKD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtyNoiDKKD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtyNguoiDD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtyChucVuDD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtySoTKNH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CtyTenNH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CtyMaSoThue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaKV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTN" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="tnKhachHang_SendMailNhacNo" Member="SendMailNhacNos" ThisKey="MaKH" OtherKey="MaKH" Type="SendMailNhacNo" />
+      <Association Name="tnKhachHang_SendMailDetail" Member="SendMailDetails" ThisKey="MaKH" OtherKey="MaKH" Type="SendMailDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SendMailNhacNo" Member="SendMailNhacNos">
+    <Type Name="SendMailNhacNo">
+      <Column Name="MailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FileDinhKem" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGianGui" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MailFrom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tnKhachHang_SendMailNhacNo" Member="tnKhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="tnKhachHang" IsForeignKey="true" />
+      <Association Name="SendMailAccount_SendMailNhacNo" Member="SendMailAccount" ThisKey="MailFrom" OtherKey="ID" Type="SendMailAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SendMailDetail" Member="SendMailDetails">
+    <Type Name="SendMailDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MailID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tnKhachHang_SendMailDetail" Member="tnKhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="tnKhachHang" IsForeignKey="true" />
+      <Association Name="SendMail_SendMailDetail" Member="SendMail" ThisKey="MailID" OtherKey="MailID" Type="SendMail" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SendMailAccount" Member="SendMailAccounts">
+    <Type Name="SendMailAccount">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Server" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Port" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SendMailAccount_SendMailNhacNo" Member="SendMailNhacNos" ThisKey="ID" OtherKey="MailFrom" Type="SendMailNhacNo" />
+      <Association Name="SendMailAccount_SendMail" Member="SendMails" ThisKey="ID" OtherKey="MailFrom" Type="SendMail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SendMail" Member="SendMails">
+    <Type Name="SendMail">
+      <Column Name="MailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGianGui" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MailFrom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SendMail_SendMailDetail" Member="SendMailDetails" ThisKey="MailID" OtherKey="MailID" Type="SendMailDetail" />
+      <Association Name="SendMailAccount_SendMail" Member="SendMailAccount" ThisKey="MailFrom" OtherKey="ID" Type="SendMailAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

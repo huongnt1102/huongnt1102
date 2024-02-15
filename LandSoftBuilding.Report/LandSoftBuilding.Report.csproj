@@ -1,0 +1,1347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75F9BDEE-655F-4EB2-9B85-A4731239C1E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LandSoftBuilding.Report</RootNamespace>
+    <AssemblyName>LandSoftBuilding.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Building.PrintControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Building.PrintControls.dll</HintPath>
+    </Reference>
+    <Reference Include="BuildingDesignTemplate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\BuildingDesignTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.38.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Win.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FTP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\FTP.dll</HintPath>
+    </Reference>
+    <Reference Include="LandSoftBuilding.Marketing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LandSoftBuilding.Marketing.dll</HintPath>
+    </Reference>
+    <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Library.Class, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.Class.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Translate, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Translate.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoCaoBWP\frm1KhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoBWP\frm1KhThu.designer.cs">
+      <DependentUpon>frm1KhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoKHNoPhiDichVuToanCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoKHNoPhiDichVuToanCongTy.Designer.cs">
+      <DependentUpon>frmBaoCaoKHNoPhiDichVuToanCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCongNoTheXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCongNoTheXe.Designer.cs">
+      <DependentUpon>frmCongNoTheXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKyBaoCaoToaNha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKyBaoCaoToaNha.Designer.cs">
+      <DependentUpon>frmKyBaoCaoToaNha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKyBaoCaoYeuCauKhieuNaiCuaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKyBaoCaoYeuCauKhieuNaiCuaKH.Designer.cs">
+      <DependentUpon>frmKyBaoCaoYeuCauKhieuNaiCuaKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKyBCTienThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKyBCTienThu.designer.cs">
+      <DependentUpon>frmKyBCTienThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOption.Designer.cs">
+      <DependentUpon>frmOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhanQuyenBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanQuyenBaoCao.Designer.cs">
+      <DependentUpon>frmPhanQuyenBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPickDateTower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPickDateTower.designer.cs">
+      <DependentUpon>frmPickDateTower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Input\rptDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Input\rptDetail.designer.cs">
+      <DependentUpon>rptDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThu.designer.cs">
+      <DependentUpon>rptPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThu257.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThu257.designer.cs">
+      <DependentUpon>rptPhieuThu257.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThuImperia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThuImperia.Designer.cs">
+      <DependentUpon>rptPhieuThuImperia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThuImperiaOutside.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThuImperiaOutside.Designer.cs">
+      <DependentUpon>rptPhieuThuImperiaOutside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThuMau3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThuMau3.designer.cs">
+      <DependentUpon>rptPhieuThuMau3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThu_TrungTin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Input\rptPhieuThu_TrungTin.designer.cs">
+      <DependentUpon>rptPhieuThu_TrungTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Output\rptPhieuChi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Output\rptPhieuChi.designer.cs">
+      <DependentUpon>rptPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Output\rptPhieuChiImperia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Output\rptPhieuChiImperia.Designer.cs">
+      <DependentUpon>rptPhieuChiImperia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Output\rptPhieuChiSongNgu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Output\rptPhieuChiSongNgu.designer.cs">
+      <DependentUpon>rptPhieuChiSongNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Reports\rptKhauTru.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Reports\rptKhauTru.Designer.cs">
+      <DependentUpon>rptKhauTru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Reports\rptPhieuChi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Reports\rptPhieuChi.Designer.cs">
+      <DependentUpon>rptPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Reports\rptPhieuThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fund\Reports\rptPhieuThu.Designer.cs">
+      <DependentUpon>rptPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lease\rptHopDongGianHangPYDaiHan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lease\rptHopDongGianHangPYDaiHan.Designer.cs">
+      <DependentUpon>rptHopDongGianHangPYDaiHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lease\rptHopDongGianHangPYNganHan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lease\rptHopDongGianHangPYNganHan.designer.cs">
+      <DependentUpon>rptHopDongGianHangPYNganHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lease\rptHopDongThueGianHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lease\rptHopDongThueGianHang.Designer.cs">
+      <DependentUpon>rptHopDongThueGianHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lease\rptHopDongThueKho.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lease\rptHopDongThueKho.Designer.cs">
+      <DependentUpon>rptHopDongThueKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lease\rptThongBaoThanhToan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lease\rptThongBaoThanhToan.Designer.cs">
+      <DependentUpon>rptThongBaoThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lease\rptThongBaoThanhToanMau2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lease\rptThongBaoThanhToanMau2.Designer.cs">
+      <DependentUpon>rptThongBaoThanhToanMau2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receivables\GiayBao\frmGiayBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\frmGiayBao.Designer.cs">
+      <DependentUpon>frmGiayBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDichVuCoBan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDichVuCoBan.Designer.cs">
+      <DependentUpon>rptDichVuCoBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDichVuCoBanImperia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDichVuCoBanImperia.Designer.cs">
+      <DependentUpon>rptDichVuCoBanImperia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDichVuCoBanTTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDichVuCoBanTTC.Designer.cs">
+      <DependentUpon>rptDichVuCoBanTTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDichVuCoBanTTC_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDichVuCoBanTTC_XemLai.Designer.cs">
+      <DependentUpon>rptDichVuCoBanTTC_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDieuHoaNgoaiGio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDieuHoaNgoaiGio.Designer.cs">
+      <DependentUpon>rptDieuHoaNgoaiGio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDoanhThuGiamTru.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptDoanhThuGiamTru.Designer.cs">
+      <DependentUpon>rptDoanhThuGiamTru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBao.Designer.cs">
+      <DependentUpon>rptGiayBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoHoaPhat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoHoaPhat.designer.cs">
+      <DependentUpon>rptGiayBaoHoaPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperia.designer.cs">
+      <DependentUpon>rptGiayBaoImperia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaLan2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaLan2.designer.cs">
+      <DependentUpon>rptGiayBaoImperiaLan2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaNhacNo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaNhacNo.designer.cs">
+      <DependentUpon>rptGiayBaoImperiaNhacNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaNuoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaNuoc.designer.cs">
+      <DependentUpon>rptGiayBaoImperiaNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaPQL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaPQL.designer.cs">
+      <DependentUpon>rptGiayBaoImperiaPQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaXe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoImperiaXe.designer.cs">
+      <DependentUpon>rptGiayBaoImperiaXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoMIK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoMIK.Designer.cs">
+      <DependentUpon>rptGiayBaoMIK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoPhiDienDieuHoaKhoiDe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoPhiDienDieuHoaKhoiDe.designer.cs">
+      <DependentUpon>rptGiayBaoPhiDienDieuHoaKhoiDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoPhiDienKhoiDe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoPhiDienKhoiDe.designer.cs">
+      <DependentUpon>rptGiayBaoPhiDienKhoiDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoPhiGiuXeKhoiDe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoPhiGiuXeKhoiDe.designer.cs">
+      <DependentUpon>rptGiayBaoPhiGiuXeKhoiDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoPhiNuocKhoiDe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoPhiNuocKhoiDe.designer.cs">
+      <DependentUpon>rptGiayBaoPhiNuocKhoiDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoThangLong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoThangLong.designer.cs">
+      <DependentUpon>rptGiayBaoThangLong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoThangLongBlank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoThangLongBlank.designer.cs">
+      <DependentUpon>rptGiayBaoThangLongBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoTTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoTTC.designer.cs">
+      <DependentUpon>rptGiayBaoTTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoTTC_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptGiayBaoTTC_XemLai.designer.cs">
+      <DependentUpon>rptGiayBaoTTC_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptHoaDonGiayBaoMau8.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptHoaDonGiayBaoMau8.Designer.cs">
+      <DependentUpon>rptHoaDonGiayBaoMau8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptNuocHoaPhat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptNuocHoaPhat.Designer.cs">
+      <DependentUpon>rptNuocHoaPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPhieuThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPhieuThu.designer.cs">
+      <DependentUpon>rptPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPQLHoaPhat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPQLHoaPhat.Designer.cs">
+      <DependentUpon>rptPQLHoaPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPQLImperia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPQLImperia.Designer.cs">
+      <DependentUpon>rptPQLImperia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPQLTTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPQLTTC.Designer.cs">
+      <DependentUpon>rptPQLTTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPQLTTC_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptPQLTTC_XemLai.Designer.cs">
+      <DependentUpon>rptPQLTTC_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptsubTienNuoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptsubTienNuoc.Designer.cs">
+      <DependentUpon>rptsubTienNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXe.Designer.cs">
+      <DependentUpon>rptTheXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeImperia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeImperia.Designer.cs">
+      <DependentUpon>rptTheXeImperia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeImperiaCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeImperiaCH.Designer.cs">
+      <DependentUpon>rptTheXeImperiaCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeThangLong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeThangLong.designer.cs">
+      <DependentUpon>rptTheXeThangLong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeTTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeTTC.Designer.cs">
+      <DependentUpon>rptTheXeTTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeTTC_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTheXeTTC_XemLai.Designer.cs">
+      <DependentUpon>rptTheXeTTC_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptThongBaoNhacNo1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptThongBaoNhacNo1.Designer.cs">
+      <DependentUpon>rptThongBaoNhacNo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptThongBaoNhacNo2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptThongBaoNhacNo2.Designer.cs">
+      <DependentUpon>rptThongBaoNhacNo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptThongBaoThuPhiQuanLyVanHanh_04.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptThongBaoThuPhiQuanLyVanHanh_04.Designer.cs">
+      <DependentUpon>rptThongBaoThuPhiQuanLyVanHanh_04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptThongBaoThuPhiQuanLyVanHanh_05.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptThongBaoThuPhiQuanLyVanHanh_05.Designer.cs">
+      <DependentUpon>rptThongBaoThuPhiQuanLyVanHanh_05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDatCoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDatCoc.Designer.cs">
+      <DependentUpon>rptTienDatCoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDatCoc_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDatCoc_XemLai.Designer.cs">
+      <DependentUpon>rptTienDatCoc_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDien.Designer.cs">
+      <DependentUpon>rptTienDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDien3Pha.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDien3Pha.Designer.cs">
+      <DependentUpon>rptTienDien3Pha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDien3Pha_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDien3Pha_XemLai.Designer.cs">
+      <DependentUpon>rptTienDien3Pha_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDienImperia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDienImperia.Designer.cs">
+      <DependentUpon>rptTienDienImperia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDienThangLong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDienThangLong.Designer.cs">
+      <DependentUpon>rptTienDienThangLong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDienTTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDienTTC.Designer.cs">
+      <DependentUpon>rptTienDienTTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDienTTC_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienDienTTC_XemLai.Designer.cs">
+      <DependentUpon>rptTienDienTTC_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienGas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienGas.Designer.cs">
+      <DependentUpon>rptTienGas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienGas_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienGas_XemLai.Designer.cs">
+      <DependentUpon>rptTienGas_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuoc.Designer.cs">
+      <DependentUpon>rptTienNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocHoaPhat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocHoaPhat.Designer.cs">
+      <DependentUpon>rptTienNuocHoaPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocImperia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocImperia.Designer.cs">
+      <DependentUpon>rptTienNuocImperia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocImperiaCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocImperiaCH.Designer.cs">
+      <DependentUpon>rptTienNuocImperiaCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocNong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocNong.Designer.cs">
+      <DependentUpon>rptTienNuocNong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocSinhHoat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocSinhHoat.Designer.cs">
+      <DependentUpon>rptTienNuocSinhHoat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocSinhHoatThangLong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocSinhHoatThangLong.designer.cs">
+      <DependentUpon>rptTienNuocSinhHoatThangLong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocTTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocTTC.Designer.cs">
+      <DependentUpon>rptTienNuocTTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocTTC_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienNuocTTC_XemLai.Designer.cs">
+      <DependentUpon>rptTienNuocTTC_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienSuaChua.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienSuaChua.Designer.cs">
+      <DependentUpon>rptTienSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienSuaChua_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienSuaChua_XemLai.Designer.cs">
+      <DependentUpon>rptTienSuaChua_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienThue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienThue.Designer.cs">
+      <DependentUpon>rptTienThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienThue_XemLai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptTienThue_XemLai.Designer.cs">
+      <DependentUpon>rptTienThue_XemLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptXeHoaPhat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\GiayBao\rptXeHoaPhat.designer.cs">
+      <DependentUpon>rptXeHoaPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\HopDongThue\rptInBieuMau.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\HopDongThue\rptInBieuMau.designer.cs">
+      <DependentUpon>rptInBieuMau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\Reports\rptChiTietCongNo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\Reports\rptChiTietCongNo.Designer.cs">
+      <DependentUpon>rptChiTietCongNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\Reports\rptCongNo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\Reports\rptCongNo.Designer.cs">
+      <DependentUpon>rptCongNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\rptGiayBao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\rptGiayBao.Designer.cs">
+      <DependentUpon>rptGiayBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\rptGiayBao3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\rptGiayBao3.Designer.cs">
+      <DependentUpon>rptGiayBao3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\rptGiayBaoChiTiet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\rptGiayBaoChiTiet.Designer.cs">
+      <DependentUpon>rptGiayBaoChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivables\rptGiayBaoTongHop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receivables\rptGiayBaoTongHop.Designer.cs">
+      <DependentUpon>rptGiayBaoTongHop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptBangTongHopPhaiThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBangTongHopPhaiThu.Designer.cs">
+      <DependentUpon>rptBangTongHopPhaiThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptBaoCaoCacKhoanPhiDV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBaoCaoCacKhoanPhiDV.Designer.cs">
+      <DependentUpon>rptBaoCaoCacKhoanPhiDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptBaoCaoKeHoachThuTien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBaoCaoKeHoachThuTien.designer.cs">
+      <DependentUpon>rptBaoCaoKeHoachThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptBaoCaoKhNoPhiDichVuToanCongTy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBaoCaoKhNoPhiDichVuToanCongTy.Designer.cs">
+      <DependentUpon>rptBaoCaoKhNoPhiDichVuToanCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptBaoCaoXe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBaoCaoXe.designer.cs">
+      <DependentUpon>rptBaoCaoXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptBaoCaoyeuCauKhieuNaiKhachHangThue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBaoCaoyeuCauKhieuNaiKhachHangThue.designer.cs">
+      <DependentUpon>rptBaoCaoyeuCauKhieuNaiKhachHangThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptChiTietQuyTienMat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptChiTietQuyTienMat.designer.cs">
+      <DependentUpon>rptChiTietQuyTienMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptCongNoTheXe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCongNoTheXe.Designer.cs">
+      <DependentUpon>rptCongNoTheXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptDoanhThuTrongNgay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDoanhThuTrongNgay.Designer.cs">
+      <DependentUpon>rptDoanhThuTrongNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptPhieuThuBacHaMau2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPhieuThuBacHaMau2.designer.cs">
+      <DependentUpon>rptPhieuThuBacHaMau2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptPhieuThuLienBacHaMau2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPhieuThuLienBacHaMau2.designer.cs">
+      <DependentUpon>rptPhieuThuLienBacHaMau2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptThongBaoThanhToanVeViecThueMatBangL1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptThongBaoThanhToanVeViecThueMatBangL1.Designer.cs">
+      <DependentUpon>rptThongBaoThanhToanVeViecThueMatBangL1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptTongHopChuaThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTongHopChuaThu.Designer.cs">
+      <DependentUpon>rptTongHopChuaThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptTongHopThuTheoThang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTongHopThuTheoThang.Designer.cs">
+      <DependentUpon>rptTongHopThuTheoThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptTongHopTienChi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTongHopTienChi.designer.cs">
+      <DependentUpon>rptTongHopTienChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptTongHopTienMatNopVeCongTy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTongHopTienMatNopVeCongTy.Designer.cs">
+      <DependentUpon>rptTongHopTienMatNopVeCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptTongHopTienThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTongHopTienThu.designer.cs">
+      <DependentUpon>rptTongHopTienThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptTongHopTonQuy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTongHopTonQuy.designer.cs">
+      <DependentUpon>rptTongHopTonQuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptXeNgungSDTrongThang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptXeNgungSDTrongThang.designer.cs">
+      <DependentUpon>rptXeNgungSDTrongThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptXePhatSinhTrongThang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptXePhatSinhTrongThang.designer.cs">
+      <DependentUpon>rptXePhatSinhTrongThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubrptBaoCaoCacKhoanPhiDV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubrptBaoCaoCacKhoanPhiDV.Designer.cs">
+      <DependentUpon>SubrptBaoCaoCacKhoanPhiDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheXe\FrmBaoCaoChiTietPhiGiuXeDapThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheXe\FrmBaoCaoChiTietPhiGiuXeDapThang.Designer.cs">
+      <DependentUpon>FrmBaoCaoChiTietPhiGiuXeDapThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheXe\FrmBaoCaoChiTietPhiGiuXeMayThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheXe\FrmBaoCaoChiTietPhiGiuXeMayThang.Designer.cs">
+      <DependentUpon>FrmBaoCaoChiTietPhiGiuXeMayThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheXe\FrmBaoCaoChiTietPhiGiuOtoThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheXe\FrmBaoCaoChiTietPhiGiuOtoThang.Designer.cs">
+      <DependentUpon>FrmBaoCaoChiTietPhiGiuOtoThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheXe\FrmBaoCaoChiTietPhiGiuXeThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheXe\FrmBaoCaoChiTietPhiGiuXeThang.Designer.cs">
+      <DependentUpon>FrmBaoCaoChiTietPhiGiuXeThang.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaoCaoBWP\frm1KhThu.resx">
+      <DependentUpon>frm1KhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoKHNoPhiDichVuToanCongTy.resx">
+      <DependentUpon>frmBaoCaoKHNoPhiDichVuToanCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCongNoTheXe.resx">
+      <DependentUpon>frmCongNoTheXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKyBaoCaoToaNha.resx">
+      <DependentUpon>frmKyBaoCaoToaNha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKyBaoCaoYeuCauKhieuNaiCuaKH.resx">
+      <DependentUpon>frmKyBaoCaoYeuCauKhieuNaiCuaKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKyBCTienThu.resx">
+      <DependentUpon>frmKyBCTienThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOption.resx">
+      <DependentUpon>frmOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanQuyenBaoCao.resx">
+      <DependentUpon>frmPhanQuyenBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPickDateTower.resx">
+      <DependentUpon>frmPickDateTower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Input\rptDetail.resx">
+      <DependentUpon>rptDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Input\rptPhieuThu.resx">
+      <DependentUpon>rptPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Input\rptPhieuThu257.resx">
+      <DependentUpon>rptPhieuThu257.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Input\rptPhieuThuImperia.resx">
+      <DependentUpon>rptPhieuThuImperia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Input\rptPhieuThuImperiaOutside.resx">
+      <DependentUpon>rptPhieuThuImperiaOutside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Input\rptPhieuThuMau3.resx">
+      <DependentUpon>rptPhieuThuMau3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Input\rptPhieuThu_TrungTin.resx">
+      <DependentUpon>rptPhieuThu_TrungTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Output\rptPhieuChi.resx">
+      <DependentUpon>rptPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Output\rptPhieuChiImperia.resx">
+      <DependentUpon>rptPhieuChiImperia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Output\rptPhieuChiSongNgu.resx">
+      <DependentUpon>rptPhieuChiSongNgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Reports\rptKhauTru.resx">
+      <DependentUpon>rptKhauTru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Reports\rptPhieuChi.resx">
+      <DependentUpon>rptPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fund\Reports\rptPhieuThu.resx">
+      <DependentUpon>rptPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lease\rptHopDongGianHangPYDaiHan.resx">
+      <DependentUpon>rptHopDongGianHangPYDaiHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lease\rptHopDongGianHangPYNganHan.resx">
+      <DependentUpon>rptHopDongGianHangPYNganHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lease\rptHopDongThueGianHang.resx">
+      <DependentUpon>rptHopDongThueGianHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lease\rptHopDongThueKho.resx">
+      <DependentUpon>rptHopDongThueKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lease\rptThongBaoThanhToan.resx">
+      <DependentUpon>rptThongBaoThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lease\rptThongBaoThanhToanMau2.resx">
+      <DependentUpon>rptThongBaoThanhToanMau2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Receivables\GiayBao\frmGiayBao.resx">
+      <DependentUpon>frmGiayBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptDichVuCoBan.resx">
+      <DependentUpon>rptDichVuCoBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptDichVuCoBanImperia.resx">
+      <DependentUpon>rptDichVuCoBanImperia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptDichVuCoBanTTC.resx">
+      <DependentUpon>rptDichVuCoBanTTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptDichVuCoBanTTC_XemLai.resx">
+      <DependentUpon>rptDichVuCoBanTTC_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptDieuHoaNgoaiGio.resx">
+      <DependentUpon>rptDieuHoaNgoaiGio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptDoanhThuGiamTru.resx">
+      <DependentUpon>rptDoanhThuGiamTru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBao.resx">
+      <DependentUpon>rptGiayBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoHoaPhat.resx">
+      <DependentUpon>rptGiayBaoHoaPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoImperia.resx">
+      <DependentUpon>rptGiayBaoImperia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoImperiaLan2.resx">
+      <DependentUpon>rptGiayBaoImperiaLan2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoImperiaNhacNo.resx">
+      <DependentUpon>rptGiayBaoImperiaNhacNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoImperiaNuoc.resx">
+      <DependentUpon>rptGiayBaoImperiaNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoImperiaPQL.resx">
+      <DependentUpon>rptGiayBaoImperiaPQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoImperiaXe.resx">
+      <DependentUpon>rptGiayBaoImperiaXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoMIK.resx">
+      <DependentUpon>rptGiayBaoMIK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoPhiDienDieuHoaKhoiDe.resx">
+      <DependentUpon>rptGiayBaoPhiDienDieuHoaKhoiDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoPhiDienKhoiDe.resx">
+      <DependentUpon>rptGiayBaoPhiDienKhoiDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoPhiGiuXeKhoiDe.resx">
+      <DependentUpon>rptGiayBaoPhiGiuXeKhoiDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoPhiNuocKhoiDe.resx">
+      <DependentUpon>rptGiayBaoPhiNuocKhoiDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoThangLong.resx">
+      <DependentUpon>rptGiayBaoThangLong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoThangLongBlank.resx">
+      <DependentUpon>rptGiayBaoThangLongBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoTTC.resx">
+      <DependentUpon>rptGiayBaoTTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptGiayBaoTTC_XemLai.resx">
+      <DependentUpon>rptGiayBaoTTC_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptHoaDonGiayBaoMau8.resx">
+      <DependentUpon>rptHoaDonGiayBaoMau8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptNuocHoaPhat.resx">
+      <DependentUpon>rptNuocHoaPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptPhieuThu.resx">
+      <DependentUpon>rptPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptPQLHoaPhat.resx">
+      <DependentUpon>rptPQLHoaPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptPQLImperia.resx">
+      <DependentUpon>rptPQLImperia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptPQLTTC.resx">
+      <DependentUpon>rptPQLTTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptPQLTTC_XemLai.resx">
+      <DependentUpon>rptPQLTTC_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptsubTienNuoc.resx">
+      <DependentUpon>rptsubTienNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTheXe.resx">
+      <DependentUpon>rptTheXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTheXeImperia.resx">
+      <DependentUpon>rptTheXeImperia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTheXeImperiaCH.resx">
+      <DependentUpon>rptTheXeImperiaCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTheXeThangLong.resx">
+      <DependentUpon>rptTheXeThangLong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTheXeTTC.resx">
+      <DependentUpon>rptTheXeTTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTheXeTTC_XemLai.resx">
+      <DependentUpon>rptTheXeTTC_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptThongBaoNhacNo1.resx">
+      <DependentUpon>rptThongBaoNhacNo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptThongBaoNhacNo2.resx">
+      <DependentUpon>rptThongBaoNhacNo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptThongBaoThuPhiQuanLyVanHanh_04.resx">
+      <DependentUpon>rptThongBaoThuPhiQuanLyVanHanh_04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptThongBaoThuPhiQuanLyVanHanh_05.resx">
+      <DependentUpon>rptThongBaoThuPhiQuanLyVanHanh_05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDatCoc.resx">
+      <DependentUpon>rptTienDatCoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDatCoc_XemLai.resx">
+      <DependentUpon>rptTienDatCoc_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDien.resx">
+      <DependentUpon>rptTienDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDien3Pha.resx">
+      <DependentUpon>rptTienDien3Pha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDien3Pha_XemLai.resx">
+      <DependentUpon>rptTienDien3Pha_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDienImperia.resx">
+      <DependentUpon>rptTienDienImperia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDienThangLong.resx">
+      <DependentUpon>rptTienDienThangLong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDienTTC.resx">
+      <DependentUpon>rptTienDienTTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienDienTTC_XemLai.resx">
+      <DependentUpon>rptTienDienTTC_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienGas.resx">
+      <DependentUpon>rptTienGas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienGas_XemLai.resx">
+      <DependentUpon>rptTienGas_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuoc.resx">
+      <DependentUpon>rptTienNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuocHoaPhat.resx">
+      <DependentUpon>rptTienNuocHoaPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuocImperia.resx">
+      <DependentUpon>rptTienNuocImperia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuocImperiaCH.resx">
+      <DependentUpon>rptTienNuocImperiaCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuocNong.resx">
+      <DependentUpon>rptTienNuocNong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuocSinhHoat.resx">
+      <DependentUpon>rptTienNuocSinhHoat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuocSinhHoatThangLong.resx">
+      <DependentUpon>rptTienNuocSinhHoatThangLong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuocTTC.resx">
+      <DependentUpon>rptTienNuocTTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienNuocTTC_XemLai.resx">
+      <DependentUpon>rptTienNuocTTC_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienSuaChua.resx">
+      <DependentUpon>rptTienSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienSuaChua_XemLai.resx">
+      <DependentUpon>rptTienSuaChua_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienThue.resx">
+      <DependentUpon>rptTienThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptTienThue_XemLai.resx">
+      <DependentUpon>rptTienThue_XemLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\GiayBao\rptXeHoaPhat.resx">
+      <DependentUpon>rptXeHoaPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\HopDongThue\rptInBieuMau.resx">
+      <DependentUpon>rptInBieuMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\Reports\rptChiTietCongNo.resx">
+      <DependentUpon>rptChiTietCongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\Reports\rptCongNo.resx">
+      <DependentUpon>rptCongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\rptGiayBao.resx">
+      <DependentUpon>rptGiayBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\rptGiayBao3.resx">
+      <DependentUpon>rptGiayBao3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\rptGiayBaoChiTiet.resx">
+      <DependentUpon>rptGiayBaoChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivables\rptGiayBaoTongHop.resx">
+      <DependentUpon>rptGiayBaoTongHop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBangTongHopPhaiThu.resx">
+      <DependentUpon>rptBangTongHopPhaiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBaoCaoCacKhoanPhiDV.resx">
+      <DependentUpon>rptBaoCaoCacKhoanPhiDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBaoCaoKeHoachThuTien.resx">
+      <DependentUpon>rptBaoCaoKeHoachThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBaoCaoKhNoPhiDichVuToanCongTy.resx">
+      <DependentUpon>rptBaoCaoKhNoPhiDichVuToanCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBaoCaoXe.resx">
+      <DependentUpon>rptBaoCaoXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBaoCaoyeuCauKhieuNaiKhachHangThue.resx">
+      <DependentUpon>rptBaoCaoyeuCauKhieuNaiKhachHangThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptChiTietQuyTienMat.resx">
+      <DependentUpon>rptChiTietQuyTienMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCongNoTheXe.resx">
+      <DependentUpon>rptCongNoTheXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDoanhThuTrongNgay.resx">
+      <DependentUpon>rptDoanhThuTrongNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPhieuThuBacHaMau2.resx">
+      <DependentUpon>rptPhieuThuBacHaMau2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPhieuThuLienBacHaMau2.resx">
+      <DependentUpon>rptPhieuThuLienBacHaMau2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptThongBaoThanhToanVeViecThueMatBangL1.resx">
+      <DependentUpon>rptThongBaoThanhToanVeViecThueMatBangL1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTongHopChuaThu.resx">
+      <DependentUpon>rptTongHopChuaThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTongHopThuTheoThang.resx">
+      <DependentUpon>rptTongHopThuTheoThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTongHopTienChi.resx">
+      <DependentUpon>rptTongHopTienChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTongHopTienMatNopVeCongTy.resx">
+      <DependentUpon>rptTongHopTienMatNopVeCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTongHopTienThu.resx">
+      <DependentUpon>rptTongHopTienThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTongHopTonQuy.resx">
+      <DependentUpon>rptTongHopTonQuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptXeNgungSDTrongThang.resx">
+      <DependentUpon>rptXeNgungSDTrongThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptXePhatSinhTrongThang.resx">
+      <DependentUpon>rptXePhatSinhTrongThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubrptBaoCaoCacKhoanPhiDV.resx">
+      <DependentUpon>SubrptBaoCaoCacKhoanPhiDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheXe\FrmBaoCaoChiTietPhiGiuXeDapThang.resx">
+      <DependentUpon>FrmBaoCaoChiTietPhiGiuXeDapThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheXe\FrmBaoCaoChiTietPhiGiuXeMayThang.resx">
+      <DependentUpon>FrmBaoCaoChiTietPhiGiuXeMayThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheXe\FrmBaoCaoChiTietPhiGiuOtoThang.resx">
+      <DependentUpon>FrmBaoCaoChiTietPhiGiuOtoThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheXe\FrmBaoCaoChiTietPhiGiuXeThang.resx">
+      <DependentUpon>FrmBaoCaoChiTietPhiGiuXeThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

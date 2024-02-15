@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFAB4BDA-E722-42D0-8BD5-39969CCE2743}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Building.BieuDoMain</RootNamespace>
+    <AssemblyName>Building.BieuDoMain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CtlBieuDoDoanhThuDuKien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoDoanhThuDuKien.Designer.cs">
+      <DependentUpon>CtlBieuDoDoanhThuDuKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoDoanhThuThucTe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoDoanhThuThucTe.Designer.cs">
+      <DependentUpon>CtlBieuDoDoanhThuThucTe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoTongConNo_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoTongConNo_1.Designer.cs">
+      <DependentUpon>CtlBieuDoTongConNo_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoTongDaThu_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoTongDaThu_1.Designer.cs">
+      <DependentUpon>CtlBieuDoTongDaThu_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoTongPhaiThu_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoTongPhaiThu_1.Designer.cs">
+      <DependentUpon>CtlBieuDoTongPhaiThu_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoTyLeLapDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoTyLeLapDay.Designer.cs">
+      <DependentUpon>CtlBieuDoTyLeLapDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoTongDaThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoTongDaThu.Designer.cs">
+      <DependentUpon>CtlBieuDoTongDaThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoTongConNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoTongConNo.Designer.cs">
+      <DependentUpon>CtlBieuDoTongConNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoTinhHinhThueCanHo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoTinhHinhThueCanHo.Designer.cs">
+      <DependentUpon>CtlBieuDoTinhHinhThueCanHo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoTongPhaiThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoTongPhaiThu.Designer.cs">
+      <DependentUpon>CtlBieuDoTongPhaiThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoYeuCauTrongNgayCaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoYeuCauTrongNgayCaNhan.Designer.cs">
+      <DependentUpon>CtlBieuDoYeuCauTrongNgayCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBieuDoYeuCauTrongNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBieuDoYeuCauTrongNgay.Designer.cs">
+      <DependentUpon>CtlBieuDoYeuCauTrongNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKeToanThanhToanPhi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKeToanThanhToanPhi.Designer.cs">
+      <DependentUpon>CtlKeToanThanhToanPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlDanhGiaSao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlDanhGiaSao.Designer.cs">
+      <DependentUpon>CtlDanhGiaSao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlHangMucKhongDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlHangMucKhongDat.Designer.cs">
+      <DependentUpon>CtlHangMucKhongDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlLineDoanhThu_PhaiThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlLineDoanhThu_PhaiThu.designer.cs">
+      <DependentUpon>CtlLineDoanhThu_PhaiThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlLineDoanhThu_DaThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlLineDoanhThu_DaThu.designer.cs">
+      <DependentUpon>CtlLineDoanhThu_DaThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlQuanLyBanGiaoMatBang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlQuanLyBanGiaoMatBang.Designer.cs">
+      <DependentUpon>CtlQuanLyBanGiaoMatBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlSoCanBanGiaoKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlSoCanBanGiaoKhachHang.Designer.cs">
+      <DependentUpon>CtlSoCanBanGiaoKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlSoCanBanGiaoKhachHangTong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlSoCanBanGiaoKhachHangTong.designer.cs">
+      <DependentUpon>CtlSoCanBanGiaoKhachHangTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlSoCanBanGiaoNoiBo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlSoCanBanGiaoNoiBo.Designer.cs">
+      <DependentUpon>CtlSoCanBanGiaoNoiBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlSoCanBanGiaoNoiBoTong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlSoCanBanGiaoNoiBoTong.designer.cs">
+      <DependentUpon>CtlSoCanBanGiaoNoiBoTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlSoLuongYeuCau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlSoLuongYeuCau.Designer.cs">
+      <DependentUpon>CtlSoLuongYeuCau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlSoLuongYeuCauHoanThanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlSoLuongYeuCauHoanThanh.Designer.cs">
+      <DependentUpon>CtlSoLuongYeuCauHoanThanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlThongKeSuDungApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlThongKeSuDungApp.Designer.cs">
+      <DependentUpon>CtlThongKeSuDungApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlTinhHinhCongNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTinhHinhCongNo.Designer.cs">
+      <DependentUpon>CtlTinhHinhCongNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlTinhHinhCongNoPhatSinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTinhHinhCongNoPhatSinh.Designer.cs">
+      <DependentUpon>CtlTinhHinhCongNoPhatSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlTinhHinhXuLyYeuCau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTinhHinhXuLyYeuCau.Designer.cs">
+      <DependentUpon>CtlTinhHinhXuLyYeuCau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlTrangThaiLich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTrangThaiLich.Designer.cs">
+      <DependentUpon>CtlTrangThaiLich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlTyLeDangTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTyLeDangTin.Designer.cs">
+      <DependentUpon>CtlTyLeDangTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSach\CtlDanhSachYeuCauTrongNgayCaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhSach\CtlDanhSachYeuCauTrongNgayCaNhan.Designer.cs">
+      <DependentUpon>CtlDanhSachYeuCauTrongNgayCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSach\CtlDanhSachYeuCauTrongNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhSach\CtlDanhSachYeuCauTrongNgay.Designer.cs">
+      <DependentUpon>CtlDanhSachYeuCauTrongNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSach\CtlDanhSachYeuCauTreHanCaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhSach\CtlDanhSachYeuCauTreHanCaNhan.Designer.cs">
+      <DependentUpon>CtlDanhSachYeuCauTreHanCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSach\CtlDanhSachYeuCauTreHan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhSach\CtlDanhSachYeuCauTreHan.Designer.cs">
+      <DependentUpon>CtlDanhSachYeuCauTreHan.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CtlBieuDoDoanhThuDuKien.resx">
+      <DependentUpon>CtlBieuDoDoanhThuDuKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoDoanhThuThucTe.resx">
+      <DependentUpon>CtlBieuDoDoanhThuThucTe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoTongConNo_1.resx">
+      <DependentUpon>CtlBieuDoTongConNo_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoTongDaThu_1.resx">
+      <DependentUpon>CtlBieuDoTongDaThu_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoTongPhaiThu_1.resx">
+      <DependentUpon>CtlBieuDoTongPhaiThu_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoTyLeLapDay.resx">
+      <DependentUpon>CtlBieuDoTyLeLapDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoTongDaThu.resx">
+      <DependentUpon>CtlBieuDoTongDaThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoTongConNo.resx">
+      <DependentUpon>CtlBieuDoTongConNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoTinhHinhThueCanHo.resx">
+      <DependentUpon>CtlBieuDoTinhHinhThueCanHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoTongPhaiThu.resx">
+      <DependentUpon>CtlBieuDoTongPhaiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoYeuCauTrongNgayCaNhan.resx">
+      <DependentUpon>CtlBieuDoYeuCauTrongNgayCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBieuDoYeuCauTrongNgay.resx">
+      <DependentUpon>CtlBieuDoYeuCauTrongNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKeToanThanhToanPhi.resx">
+      <DependentUpon>CtlKeToanThanhToanPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlDanhGiaSao.resx">
+      <DependentUpon>CtlDanhGiaSao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlHangMucKhongDat.resx">
+      <DependentUpon>CtlHangMucKhongDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlLineDoanhThu_PhaiThu.resx">
+      <DependentUpon>CtlLineDoanhThu_PhaiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlLineDoanhThu_DaThu.resx">
+      <DependentUpon>CtlLineDoanhThu_DaThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlQuanLyBanGiaoMatBang.resx">
+      <DependentUpon>CtlQuanLyBanGiaoMatBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlSoCanBanGiaoKhachHang.resx">
+      <DependentUpon>CtlSoCanBanGiaoKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlSoCanBanGiaoKhachHangTong.resx">
+      <DependentUpon>CtlSoCanBanGiaoKhachHangTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlSoCanBanGiaoNoiBo.resx">
+      <DependentUpon>CtlSoCanBanGiaoNoiBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlSoCanBanGiaoNoiBoTong.resx">
+      <DependentUpon>CtlSoCanBanGiaoNoiBoTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlSoLuongYeuCau.resx">
+      <DependentUpon>CtlSoLuongYeuCau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlSoLuongYeuCauHoanThanh.resx">
+      <DependentUpon>CtlSoLuongYeuCauHoanThanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlThongKeSuDungApp.resx">
+      <DependentUpon>CtlThongKeSuDungApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTinhHinhCongNo.resx">
+      <DependentUpon>CtlTinhHinhCongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTinhHinhCongNoPhatSinh.resx">
+      <DependentUpon>CtlTinhHinhCongNoPhatSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTinhHinhXuLyYeuCau.resx">
+      <DependentUpon>CtlTinhHinhXuLyYeuCau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTrangThaiLich.resx">
+      <DependentUpon>CtlTrangThaiLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTyLeDangTin.resx">
+      <DependentUpon>CtlTyLeDangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSach\CtlDanhSachYeuCauTrongNgayCaNhan.resx">
+      <DependentUpon>CtlDanhSachYeuCauTrongNgayCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSach\CtlDanhSachYeuCauTrongNgay.resx">
+      <DependentUpon>CtlDanhSachYeuCauTrongNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSach\CtlDanhSachYeuCauTreHanCaNhan.resx">
+      <DependentUpon>CtlDanhSachYeuCauTreHanCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSach\CtlDanhSachYeuCauTreHan.resx">
+      <DependentUpon>CtlDanhSachYeuCauTreHan.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.38.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Library.Class, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Library.Class.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Translate, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Translate.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DichVu.YeuCau\DichVu.YeuCau.csproj">
+      <Project>{c3ee1475-fb83-4e5e-a196-d18c2dc187f1}</Project>
+      <Name>DichVu.YeuCau</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LandSoftBuilding.Receivables\LandSoftBuilding.Receivables.csproj">
+      <Project>{528fddb9-088b-46f1-97d2-d446bb6c1049}</Project>
+      <Name>LandSoftBuilding.Receivables</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{5ebb4b4d-49c2-4152-98db-577d2714ec49}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

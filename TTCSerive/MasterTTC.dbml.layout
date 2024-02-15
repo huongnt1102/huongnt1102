@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 12.875" name="MasterTTC">
+  <DataContextMoniker Name="/MasterTTCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5e34e546-66fe-43b8-be41-8d6db0e25701" absoluteBounds="6.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycCaiDat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2cbac0cc-3f0c-49e2-ba7d-da3b391264a0" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0332ca6-2ffa-43dc-b188-7286262a9fda" absoluteBounds="9.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycYeuCau_Thread" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aef2fc57-fb0e-4b01-9dce-cfb447dca61f" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="05913205-4d0f-488f-b25d-50a2136aae02" absoluteBounds="3.75, 3.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycDoUuTien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc3c142a-4543-445e-a6df-e678607e3cf7" absoluteBounds="3.765, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d5bc9e51-7676-4e25-baf7-5cf8b5d8be7a" absoluteBounds="9.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycHinhAnh" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4417bb83-4b65-4197-9630-8aa62bb74c92" absoluteBounds="9.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54186427-c651-4baa-bdf5-8f42294cbb78" absoluteBounds="9.75, 10.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycImgNhanVienUpload" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b042067-cdd1-4a79-a870-34f9fe696ab2" absoluteBounds="9.765, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="611ad318-fa2e-47f6-a777-b0f9b39e9745" absoluteBounds="3.5, 5.75, 2, 4.2708154296875005">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycLichSuCapNhat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3cad2cd-9bb1-41e7-af8f-071d5987d5d7" absoluteBounds="3.515, 6.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f584fa78-1499-48e7-85d1-8dcd8315821c" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycLoaiYeuCau" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4fdf2e4d-7328-4d82-ab3e-0ddb09da0525" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62ff69f8-0f47-4479-9095-8a0a65289b2d" absoluteBounds="3.75, 11.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycNguonDen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9b927a1-9acc-443e-a2c0-05c0ab6be5b8" absoluteBounds="3.765, 11.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32d2e13f-c685-4449-a3cc-0c1cd2bf2f91" absoluteBounds="9.25, 6.375, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycThongBao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2aa3ed6e-6c56-43ee-b67b-9a8c94eeabb1" absoluteBounds="9.265, 6.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ba6acd6-e1b6-4300-950e-6ab04c048e8e" absoluteBounds="0.75, 7.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycTrangThai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86473da3-7a7a-474b-83fc-f98034c2f0ac" absoluteBounds="0.765, 7.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="776a5677-3628-4f71-a40c-1eb1ad90dd3f" absoluteBounds="6.5, 4, 2, 7.7322412109375005">
+      <DataClassMoniker Name="/MasterTTCDataContext/tnycYeuCau" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ddd8b9d2-52b4-4a86-a85c-fb6de543c765" absoluteBounds="6.515, 4.46, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 7.81814697265625); (3.5 : 7.81814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterTTCDataContext/tnycTrangThai/tnycTrangThai_tnycLichSuCapNhat" />
+      <nodes>
+        <classShapeMoniker Id="1ba6acd6-e1b6-4300-950e-6ab04c048e8e" />
+        <classShapeMoniker Id="611ad318-fa2e-47f6-a777-b0f9b39e9745" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 7.88540771484375); (5.5 : 7.88540771484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterTTCDataContext/tnycYeuCau/tnycYeuCau_tnycLichSuCapNhat" />
+      <nodes>
+        <classShapeMoniker Id="776a5677-3628-4f71-a40c-1eb1ad90dd3f" />
+        <classShapeMoniker Id="611ad318-fa2e-47f6-a777-b0f9b39e9745" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 7.83735270182292); (9.25 : 7.83735270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterTTCDataContext/tnycYeuCau/tnycYeuCau_tnycThongBao" />
+      <nodes>
+        <classShapeMoniker Id="776a5677-3628-4f71-a40c-1eb1ad90dd3f" />
+        <classShapeMoniker Id="32d2e13f-c685-4449-a3cc-0c1cd2bf2f91" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 4.25564697265625); (6.5 : 4.25564697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterTTCDataContext/tnycDoUuTien/tnycDoUuTien_tnycYeuCau" />
+      <nodes>
+        <classShapeMoniker Id="05913205-4d0f-488f-b25d-50a2136aae02" />
+        <classShapeMoniker Id="776a5677-3628-4f71-a40c-1eb1ad90dd3f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 11.4911206054688); (6.5 : 11.4911206054688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterTTCDataContext/tnycNguonDen/tnycNguonDen_tnycYeuCau" />
+      <nodes>
+        <classShapeMoniker Id="62ff69f8-0f47-4479-9095-8a0a65289b2d" />
+        <classShapeMoniker Id="776a5677-3628-4f71-a40c-1eb1ad90dd3f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 8.5112939453125); (1.75 : 10.6354077148438); (6.5 : 10.6354077148438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MasterTTCDataContext/tnycTrangThai/tnycTrangThai_tnycYeuCau" />
+      <nodes>
+        <classShapeMoniker Id="1ba6acd6-e1b6-4300-950e-6ab04c048e8e" />
+        <classShapeMoniker Id="776a5677-3628-4f71-a40c-1eb1ad90dd3f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

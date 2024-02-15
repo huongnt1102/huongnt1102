@@ -1,0 +1,19 @@
+giá trị cột tiền đặt cọc khi import không lấy thuế, và các hợp đồng đã có thuế, thì phải chỉnh lại không cho thuế
+tiền thuê
+tính tròn đầu
+tab lịch thanh toán tách 3 cột, tiền trước thuế, tiền thuế, và tiền sau thuế
+trong debit note, 
+riêng phần hợp đồng thuê, tách 2 dòng, 1 dòng là tiền thuê 3 tháng, trước thuế, thuế và sau thuế
+2 là tiền phí dịch vụ 3 tháng, trước thuế, thuế và sau thuế
+
+6. trong phần thu tiền, thêm 1 cột là loại xe
+
+mỗi 
+số tiền còn lại * số ngày * phần trăm lãi xuất phạt chậm
+trên hóa đơn, thể hiện ngày hết hạn, số tiền chậm
+số tiến chậm= .
+cột còn nợ, tiền phạt chậm, và 1 cột còn nợ + phạt chậm
+
+báo cáo diện tích cho thuê, xem lại diện tích trống, căn cứ theo ngày thanh lý hợp đồng
+
+cảm ơn đồ nhi thật nhiều nè

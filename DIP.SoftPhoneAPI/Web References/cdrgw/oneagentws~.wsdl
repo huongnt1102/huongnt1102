@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:OneLotusGW" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:OneLotusGW" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:OneLotusGW">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="intArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="xsd:int[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="stringArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Associative">
+        <xsd:all>
+          <xsd:element name="key" type="xsd:string" />
+          <xsd:element name="value" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="AssociativeArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Associative[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="monitor">
+        <xsd:all>
+          <xsd:element name="uniqueid" type="xsd:string" />
+          <xsd:element name="userfield" type="xsd:string" />
+          <xsd:element name="accountcode" type="xsd:string" />
+          <xsd:element name="src" type="xsd:string" />
+          <xsd:element name="dst" type="xsd:string" />
+          <xsd:element name="agent" type="xsd:string" />
+          <xsd:element name="clid" type="xsd:string" />
+          <xsd:element name="channel" type="xsd:string" />
+          <xsd:element name="dstchannel" type="xsd:string" />
+          <xsd:element name="calldate" type="xsd:string" />
+          <xsd:element name="answer" type="xsd:string" />
+          <xsd:element name="end" type="xsd:string" />
+          <xsd:element name="duration" type="xsd:string" />
+          <xsd:element name="billsec" type="xsd:string" />
+          <xsd:element name="monitor_date" type="xsd:string" />
+          <xsd:element name="monitor_file" type="xsd:string" />
+          <xsd:element name="disposition" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="monitorResult">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:monitor[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="monitorRequest">
+        <xsd:all>
+          <xsd:element name="uniqueid" type="xsd:string" />
+          <xsd:element name="userfield" type="xsd:string" />
+          <xsd:element name="src" type="xsd:string" />
+          <xsd:element name="dst" type="xsd:string" />
+          <xsd:element name="userlogin" type="xsd:string" />
+          <xsd:element name="secret" type="xsd:string" />
+          <xsd:element name="fromdate" type="xsd:string" />
+          <xsd:element name="todate" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="cdr">
+        <xsd:all>
+          <xsd:element name="uniqueid" type="xsd:string" />
+          <xsd:element name="userfield" type="xsd:string" />
+          <xsd:element name="accountcode" type="xsd:string" />
+          <xsd:element name="src" type="xsd:string" />
+          <xsd:element name="dst" type="xsd:string" />
+          <xsd:element name="clid" type="xsd:string" />
+          <xsd:element name="channel" type="xsd:string" />
+          <xsd:element name="dstchannel" type="xsd:string" />
+          <xsd:element name="calldate" type="xsd:string" />
+          <xsd:element name="answer" type="xsd:string" />
+          <xsd:element name="end" type="xsd:string" />
+          <xsd:element name="duration" type="xsd:string" />
+          <xsd:element name="billsec" type="xsd:string" />
+          <xsd:element name="monitor_file" type="xsd:string" />
+          <xsd:element name="disposition" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="cdrResult">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:cdr[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="cdrRequest">
+        <xsd:all>
+          <xsd:element name="uniqueid" type="xsd:string" />
+          <xsd:element name="userfield" type="xsd:string" />
+          <xsd:element name="accountcode" type="xsd:string" />
+          <xsd:element name="src" type="xsd:string" />
+          <xsd:element name="dst" type="xsd:string" />
+          <xsd:element name="duration" type="xsd:string" />
+          <xsd:element name="disposition" type="xsd:string" />
+          <xsd:element name="userlogin" type="xsd:string" />
+          <xsd:element name="secret" type="xsd:string" />
+          <xsd:element name="fromdate" type="xsd:string" />
+          <xsd:element name="todate" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="monitor_gwRequest">
+    <wsdl:part name="request" type="tns:monitorRequest" />
+  </wsdl:message>
+  <wsdl:message name="monitor_gwResponse">
+    <wsdl:part name="return" type="tns:monitorResult" />
+  </wsdl:message>
+  <wsdl:message name="cdr_gwRequest">
+    <wsdl:part name="request" type="tns:cdrRequest" />
+  </wsdl:message>
+  <wsdl:message name="cdr_gwResponse">
+    <wsdl:part name="return" type="tns:cdrResult" />
+  </wsdl:message>
+  <wsdl:portType name="OneLotusGWPortType">
+    <wsdl:operation name="monitor_gw">
+      <wsdl:input message="tns:monitor_gwRequest" />
+      <wsdl:output message="tns:monitor_gwResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cdr_gw">
+      <wsdl:input message="tns:cdr_gwRequest" />
+      <wsdl:output message="tns:cdr_gwResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OneLotusGWBinding" type="tns:OneLotusGWPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="monitor_gw">
+      <soap:operation soapAction="http://118.69.195.253/onelotus/pbxws/oneagentws~.php/monitor_gw" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cdr_gw">
+      <soap:operation soapAction="http://118.69.195.253/onelotus/pbxws/oneagentws~.php/cdr_gw" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OneLotusGW">
+    <wsdl:port name="OneLotusGWPort" binding="tns:OneLotusGWBinding">
+      <soap:address location="http://118.69.195.253/onelotus/pbxws/oneagentws~.php?debug=1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Building_TTC_db" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=45.119.81.69;Initial Catalog=Building_TTC_db;Persist Security Info=True;User ID=Building_TTC" SettingsObjectName="ServiceTTCNew.Properties.Settings" SettingsPropertyName="Building_TTC_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tnycCaiDat" Member="tnycCaiDats">
+    <Type Name="tnycCaiDat">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaTN" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MaPB" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsMail" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsSMS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsRemind" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycYeuCau_Thread" Member="tnycYeuCau_Threads">
+    <Type Name="tnycYeuCau_Thread">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YeuCauID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NgayThang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NguyenNhan" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="BienPhapXuLy" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycDoUuTien" Member="tnycDoUuTiens">
+    <Type Name="tnycDoUuTien">
+      <Column Name="MaDoUuTien" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenDoUuTien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MauNen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tnycDoUuTien_tnycYeuCau" Member="tnycYeuCaus" ThisKey="MaDoUuTien" OtherKey="MaDoUuTien" Type="tnycYeuCau" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycHinhAnh" Member="tnycHinhAnhs">
+    <Type Name="tnycHinhAnh">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaYC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="thumbnail" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycImgNhanVienUpload" Member="tnycImgNhanVienUploads">
+    <Type Name="tnycImgNhanVienUpload">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaYC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="thumbnail" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="IDLichSuYeuCau" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycLichSuCapNhat" Member="tnycLichSuCapNhats">
+    <Type Name="tnycLichSuCapNhat">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaYC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayCN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaTT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NguyenNhan" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="BienPhapXuLy" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NhanVien" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="YKienCH" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="MaPB" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isKH" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayHetHanDauTien" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayHetHanCuoiCung" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayGiaHan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LyDoGiaHan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="RatingMark" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="tnycTrangThai_tnycLichSuCapNhat" Member="tnycTrangThai" ThisKey="MaTT" OtherKey="MaTT" Type="tnycTrangThai" IsForeignKey="true" />
+      <Association Name="tnycYeuCau_tnycLichSuCapNhat" Member="tnycYeuCau" ThisKey="MaYC" OtherKey="ID" Type="tnycYeuCau" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycLoaiYeuCau" Member="tnycLoaiYeuCaus">
+    <Type Name="tnycLoaiYeuCau">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenLoaiYeuCau" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TenVT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycNguonDen" Member="tnycNguonDens">
+    <Type Name="tnycNguonDen">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenNguonDen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tnycNguonDen_tnycYeuCau" Member="tnycYeuCaus" ThisKey="ID" OtherKey="MaNguonDen" Type="tnycYeuCau" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycThongBao" Member="tnycThongBaos">
+    <Type Name="tnycThongBao">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaYC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayBD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayKT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayNhac" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsNhac" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TimeID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="TimeID2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsRepeat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DaNhac" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tnycYeuCau_tnycThongBao" Member="tnycYeuCau" ThisKey="MaYC" OtherKey="ID" Type="tnycYeuCau" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycTrangThai" Member="tnycTrangThais">
+    <Type Name="tnycTrangThai">
+      <Column Name="MaTT" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenTT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MauNen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tnycTrangThai_tnycLichSuCapNhat" Member="tnycLichSuCapNhats" ThisKey="MaTT" OtherKey="MaTT" Type="tnycLichSuCapNhat" />
+      <Association Name="tnycTrangThai_tnycYeuCau" Member="tnycYeuCaus" ThisKey="MaTT" OtherKey="MaTT" Type="tnycYeuCau" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tnycYeuCau" Member="tnycYeuCaus">
+    <Type Name="tnycYeuCau">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaYC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayYC" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaBP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTN" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MaNTN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaDoUuTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaMB" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNguonDen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayHoanThanh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NguoiGui" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoYeuCau" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MaLoaiYeuCau" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TGKhachHen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsNhanTho" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayBanGiaoCH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayHetHanBH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NVXuLy" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NgayCN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="NgayHetHanDauTien" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayHetHanCuoiCung" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SoLanGiaHan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HanXuLyKhiGiaoViec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsReadResident" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsReadVendor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="RatingComment" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="RatingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GroupProcessId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tnycYeuCau_tnycLichSuCapNhat" Member="tnycLichSuCapNhats" ThisKey="ID" OtherKey="MaYC" Type="tnycLichSuCapNhat" />
+      <Association Name="tnycYeuCau_tnycThongBao" Member="tnycThongBaos" ThisKey="ID" OtherKey="MaYC" Type="tnycThongBao" />
+      <Association Name="tnycDoUuTien_tnycYeuCau" Member="tnycDoUuTien" ThisKey="MaDoUuTien" OtherKey="MaDoUuTien" Type="tnycDoUuTien" IsForeignKey="true" />
+      <Association Name="tnycNguonDen_tnycYeuCau" Member="tnycNguonDen" ThisKey="MaNguonDen" OtherKey="ID" Type="tnycNguonDen" IsForeignKey="true" />
+      <Association Name="tnycTrangThai_tnycYeuCau" Member="tnycTrangThai" ThisKey="MaTT" OtherKey="MaTT" Type="tnycTrangThai" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
