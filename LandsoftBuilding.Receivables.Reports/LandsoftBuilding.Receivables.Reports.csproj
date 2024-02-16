@@ -75,9 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Class\BaoCaoTienCocModel.cs" />
     <Compile Include="Class\ChiTietCongNoTongHopModel.cs" />
+    <Compile Include="Class\ChiTietTheoHanTTModel.cs" />
     <Compile Include="Class\ChiTietThueMatBangModel.cs" />
     <Compile Include="CongNoTongHop\frmBCThongKeDonGia.cs">
       <SubType>Form</SubType>
@@ -121,11 +121,29 @@
     <Compile Include="CongNoTongHop\frmTongHopCongNoThang.Designer.cs">
       <DependentUpon>frmTongHopCongNoThang.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\frmKeHoachTuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmKeHoachTuan.designer.cs">
+      <DependentUpon>frmKeHoachTuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeHoachThu\frmKeHoachTuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeHoachThu\frmKeHoachTuan.designer.cs">
+      <DependentUpon>frmKeHoachTuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="KeHoachThu\frmKeHoachThuNam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KeHoachThu\frmKeHoachThuNam.designer.cs">
       <DependentUpon>frmKeHoachThuNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeHoachThu\frmKeHoachTuan1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeHoachThu\frmKeHoachTuan1.designer.cs">
+      <DependentUpon>frmKeHoachTuan1.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TienCoc\frmTienCoc_Form1.cs">
@@ -164,12 +182,6 @@
     <Compile Include="TyLeLapDay\frmThongTinChung_Layout2.designer.cs">
       <DependentUpon>frmThongTinChung_Layout2.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XtraForm1.Designer.cs">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CongNoTongHop\frmBCThongKeDonGia.resx">
@@ -193,8 +205,17 @@
     <EmbeddedResource Include="CongNoTongHop\frmTongHopCongNoThang.resx">
       <DependentUpon>frmTongHopCongNoThang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmKeHoachTuan.resx">
+      <DependentUpon>frmKeHoachTuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeHoachThu\frmKeHoachTuan.resx">
+      <DependentUpon>frmKeHoachTuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KeHoachThu\frmKeHoachThuNam.resx">
       <DependentUpon>frmKeHoachThuNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeHoachThu\frmKeHoachTuan1.resx">
+      <DependentUpon>frmKeHoachTuan1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="TienCoc\frmTienCoc_Form1.resx">
@@ -214,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TyLeLapDay\frmThongTinChung_Layout2.resx">
       <DependentUpon>frmThongTinChung_Layout2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraForm1.resx">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

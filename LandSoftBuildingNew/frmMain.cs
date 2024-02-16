@@ -5942,5 +5942,28 @@ namespace LandSoftBuildingMain
             DIPBMS.SystemLog.Classes.SYS_LOG.Insert(e.Item.Caption, "Xem"); SetPhanQuyen(e);
             LoadForm(new SAP.frmLichSuDongBoLSToSap(), e.Item.Caption);
         }
+
+        /// <summary>
+        /// DANH MỤC KẾ HOẠCH TUẦN
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonItem120_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DIPBMS.SystemLog.Classes.SYS_LOG.Insert(e.Item.Caption, "Xem"); SetPhanQuyen(e);
+            LoadForm(new LandsoftBuilding.Receivables.Reports.DanhMuc.frmKeHoachTuan(), e.Item.Caption);
+        }
+
+        /// <summary>
+        /// BÁO CÁO KẾ HOẠCH THU
+        /// 1. BÁO CÁO CHI TIẾT THEO HẠN THANH TOÁN
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonItem121_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DIPBMS.SystemLog.Classes.SYS_LOG.Insert(e.Item.Caption, "Xem"); SetPhanQuyen(e);
+            LoadForm(new LandsoftBuilding.Receivables.Reports.KeHoachThu.frmKeHoachTuan1(), e.Item.Caption);
+        }
     }
 }

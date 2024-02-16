@@ -11837,6 +11837,22 @@
       <Column Name="MaLX" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.dkDuKienTheoTuan" Member="dkDuKienTheoTuans">
+    <Type Name="dkDuKienTheoTuan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Thang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tuan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TuNgay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DenNgay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TyLeCongNoQuaHan" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TyLeCongNoDenHanTuan1" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TyLeCongNoDenHanTuan2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TyLeCongNoDenHanTuan3" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TyLeCongNoDenHanTuan4" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TyLeCongNoDenHanTuan5" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.tqThamQuan_getNewMaTQ" Method="tqThamQuan_getNewMaTQ">
     <Parameter Name="MaTQ" Parameter="maTQ" Type="System.String" DbType="NVarChar(10)" Direction="InOut" />
     <Return Type="System.Int32" />
